@@ -7,15 +7,15 @@ interface Props {
   type?: string;
 }
 
-const { 
-  title, 
-  description, 
-  image = '/olimpiadeartisti-preview/og-image.jpg',
+const {
+  title,
+  description,
+  image = import.meta.env.BASE_URL + "/og-image.jpg",
   url = Astro.url.href,
-  type = 'website'
+  type = "website",
 } = Astro.props;
 
-const siteTitle = 'Olimpiade degli Artisti';
+const siteTitle = "Olimpiade degli Artisti";
 const fullTitle = title.includes(siteTitle) ? title : `${title} - ${siteTitle}`;
 ---
 
