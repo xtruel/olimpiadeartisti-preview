@@ -1,43 +1,82 @@
-# Astro Starter Kit: Minimal
+# Olimpiade degli Artisti - Preview
 
-```sh
-npm create astro@latest -- --template minimal
+Una piattaforma curatoriale moderna per valorizzare opere creative, talenti ed eccellenze artistiche.
+
+## Stack Tecnologico
+
+- **Astro** - Framework statico ultra-veloce
+- **Tailwind CSS** - Utility-first CSS framework
+- **GitHub Pages** - Hosting gratuito e automatico
+
+## Struttura Progetto
+
+```
+src/
+├── pages/           # Pagine del sito (Home, Artisti, News, ecc.)
+├── components/      # Componenti riutilizzabili (Navbar, Footer, Card, ecc.)
+├── layouts/         # Layout principali
+├── content/
+│   ├── artists/     # Profili artisti (Markdown)
+│   └── posts/       # Articoli/News (Markdown)
+└── styles/          # Stili globali
+
+public/
+└── artists/         # Immagini opere artistiche
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Pagine Principali
 
-## 🚀 Project Structure
+- **Home** (`/`) - Hero + CTA + Categorie
+- **Il Progetto** (`/progetto`) - Missione e come funziona
+- **Artisti** (`/artisti`) - Directory con filtri
+- **Artista** (`/artisti/[slug]`) - Pagina singola artista
+- **News** (`/news`) - Articoli e aggiornamenti
+- **Contatti** (`/contatti`) - Form contatti
 
-Inside of your Astro project, you'll see the following folders and files:
+## Come Aggiungere Artisti
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+1. Crea un file Markdown in `src/content/artists/`
+2. Formato:
+```markdown
+---
+name: "Nome Artista"
+category: "Categoria"
+city: "Città"
+image: "/artists/image.jpg"
+---
+
+Bio e descrizione dell'artista...
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+3. Aggiungi l'immagine in `public/artists/`
+4. Commit e push - il sito si aggiorna automaticamente
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Sviluppo Locale
 
-Any static assets, like images, can be placed in the `public/` directory.
+```bash
+npm install
+npm run dev
+```
 
-## 🧞 Commands
+Visita `http://localhost:3000`
 
-All commands are run from the root of the project, from a terminal:
+## Build
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+```bash
+npm run build
+```
 
-## 👀 Want to learn more?
+## Deploy
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Il sito si deploya automaticamente su GitHub Pages quando fai push su `main`.
+
+URL: `https://xtruel.github.io/olimpiadeartisti-preview/`
+
+## Prossimi Step
+
+- [ ] Aggiungere profili artisti
+- [ ] Implementare filtri avanzati
+- [ ] Aggiungere pagina artista dinamica
+- [ ] SEO e Open Graph
+- [ ] Sitemap
+- [ ] Multilingua (IT/EN)

@@ -1,16 +1,73 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Olimpiade degli Artisti - Home">
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-gray-50 to-gray-100 py-20 md:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-5xl md:text-6xl font-serif font-bold text-gray-900 mb-6">
+        Olimpiade degli Artisti
+      </h1>
+      <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
+        Una piattaforma curatoriale per valorizzare opere creative, talenti ed eccellenze meritevoli di visibilità.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/artisti" class="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition">
+          Esplora gli Artisti
+        </a>
+        <a href="/contatti" class="inline-block border-2 border-gray-900 text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition">
+          Proponi la tua Candidatura
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Progetto Preview -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-4xl font-serif font-bold text-gray-900 mb-6">Il Progetto</h2>
+          <p class="text-lg text-gray-700 mb-4">
+            Olimpiade degli Artisti è una piattaforma dedicata alla scoperta e alla valorizzazione di artisti e opere creative di eccellenza.
+          </p>
+          <p class="text-lg text-gray-700 mb-6">
+            Crediamo nel potere dell'arte di trasformare il mondo e vogliamo dare voce a talenti meritevoli di visibilità.
+          </p>
+          <a href="/progetto" class="text-gray-900 font-semibold hover:text-gray-700 transition">
+            Scopri di più →
+          </a>
+        </div>
+        <div class="bg-gray-200 aspect-square rounded-lg"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categorie -->
+  <section class="bg-gray-50 py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-serif font-bold text-gray-900 mb-12 text-center">Categorie Artistiche</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        {['Pittura', 'Scultura', 'Fotografia', 'Design', 'Illustrazione', 'Grafica', 'Ceramica', 'Tessile', 'Video', 'Installazione'].map(cat => (
+          <div class="bg-white p-6 rounded-lg text-center hover:shadow-md transition">
+            <p class="font-semibold text-gray-900">{cat}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Finale -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-serif font-bold text-gray-900 mb-6">Sei un Artista?</h2>
+      <p class="text-xl text-gray-700 mb-8">
+        Candidati ora e fai parte della comunità di Olimpiade degli Artisti.
+      </p>
+      <a href="/contatti" class="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition">
+        Candidati Ora
+      </a>
+    </div>
+  </section>
+</Layout>
