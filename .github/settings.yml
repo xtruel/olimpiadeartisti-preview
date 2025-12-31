@@ -1,0 +1,21 @@
+# GitHub Pages Configuration
+# Questo file configura automaticamente GitHub Pages
+
+# Repository settings
+repository:
+  # Pages settings
+  pages:
+    # Build and deployment
+    build_type: workflow
+    source:
+      branch: main
+      path: /
+    
+    # Custom domain (opzionale)
+    # cname: olimpiadeartisti.net
+    
+    # HTTPS enforcement
+    https_enforced: true
+    
+    # Public pages
+    public: true
