@@ -1,6 +1,13 @@
 @import "tailwindcss";
 
 /* Colori personalizzati per Olimpiade degli Artisti - Palette Premium */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: white;
+}
+
 :root {
   --deepviolet-50: #f5f3ff;
   --deepviolet-100: #ede9fe;
@@ -13,7 +20,6 @@
   --deepviolet-800: #5b21b6;
   --deepviolet-900: #4c1d95;
   --deepviolet-950: #1e0b44;
-  /* Più profondo per contrasto premium */
 
   --gold-50: #fffbeb;
   --gold-100: #fef3c7;
@@ -27,9 +33,9 @@
   --gold-900: #78350f;
 
   --accent-gold: #c5a059;
-  /* Oro istituzionale */
   --accent-gold-light: #e2c275;
 }
+
 
 /* Classi utility personalizzate */
 .text-deepviolet-50 {
