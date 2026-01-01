@@ -1,94 +1,171 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import ArtistCard from '../components/ArtistCard.astro';
-import { getCollection } from 'astro:content';
+import Layout from "../layouts/Layout.astro";
+import ArtistCard from "../components/ArtistCard.astro";
+import { getCollection } from "astro:content";
 
-// Carica tutti gli artisti dalla collection
-const allArtists = await getCollection('artists');
+const allArtists = await getCollection("artists");
+const categories = [
+  "Tutti",
+  ...new Set(allArtists.map((a) => a.data.category)),
+].sort();
+const baseUrl = import.meta.env.BASE_URL;
 
-// Estrai categorie uniche
-const categories = ['Tutti', ...new Set(allArtists.map(a => a.data.category))].sort();
-
-// Prepara dati artisti
-const artists = allArtists.map(artist => ({
+const artists = allArtists.map((artist) => ({
   name: artist.data.name,
   category: artist.data.category,
   city: artist.data.city,
   image: artist.data.image,
-  slug: artist.slug
+  slug: artist.slug,
 }));
 ---
 
-<Layout title="Artisti - Olimpiade degli Artisti" description="Scopri i talenti artistici della comunità Olimpiade degli Artisti">
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-    <h1 class="text-5xl font-serif font-bold text-gray-900 mb-12">Scopri gli Artisti</h1>
-    
-    <!-- Filtri -->
-    <div class="mb-12">
-      <div class="flex flex-wrap gap-3">
-        {categories.map(cat => (
-          <button 
-            class={`px-4 py-2 rounded-full font-semibold transition ${
-              cat === 'Tutti' 
-                ? 'bg-gray-900 text-white' 
-                : 'bg-gray-200 text-gray-900 hover:bg-gray-300'
-            }`}
-            data-filter={cat}
-            data-category={cat}
+<Layout
+  title="Artisti - Olimpiade degli Artisti"
+  description="Scopri i talenti artistici della comunità Olimpiade degli Artisti"
+>
+  <!-- Header Section -->
+  <section class="relative py-24 bg-deepviolet-950 overflow-hidden text-center">
+    <div class="absolute inset-0 z-0">
+      <img
+        src={`${baseUrl}/hero_purple.svg`}
+        alt=""
+        class="w-full h-full object-cover opacity-20"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-deepviolet-950 via-deepviolet-900/60 to-white z-10"
+      >
+      </div>
+    </div>
+    <div class="relative z-20 max-w-7xl mx-auto px-4">
+      <span
+        class="text-gold-400 font-bold uppercase tracking-[0.5em] text-xs mb-4 block"
+        >La Collezione Ufficiale</span
+      >
+      <h1
+        class="text-5xl md:text-7xl font-serif font-bold text-white mb-6 uppercase tracking-tight"
+      >
+        Le Eccellenze
+      </h1>
+      <div class="w-24 h-1 bg-gold-500 mx-auto"></div>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <!-- Filters UI -->
+    <div class="mb-20">
+      <div
+        class="flex flex-col md:flex-row md:items-center justify-between gap-8 border-b border-violet-100 pb-10"
+      >
+        <div>
+          <h2
+            class="font-serif text-2xl font-bold text-deepviolet-950 uppercase tracking-wider"
           >
-            {cat}
-          </button>
-        ))}
+            Filtra per Disciplina
+          </h2>
+          <p class="text-gray-500 text-sm mt-1">
+            Esplora le diverse forme di espressione artistica
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-4">
+          {
+            categories.map((cat) => (
+              <button
+                class={`px-6 py-2 border font-bold text-[11px] uppercase tracking-widest transition-all duration-300 ${
+                  cat === "Tutti"
+                    ? "bg-deepviolet-950 text-white border-deepviolet-950"
+                    : "bg-transparent text-deepviolet-900 border-violet-200 hover:border-gold-500 hover:text-gold-600"
+                }`}
+                data-filter={cat}
+                data-category={cat}
+              >
+                {cat}
+              </button>
+            ))
+          }
+        </div>
       </div>
     </div>
 
-    <!-- Gallery -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="artists-grid">
-      {artists.length > 0 ? (
-        artists.map(artist => (
-          <div class="artist-card" data-category={artist.category}>
-            <ArtistCard 
-              name={artist.name}
-              category={artist.category}
-              image={artist.image}
-              slug={artist.slug}
-            />
+    <!-- Gallery Grid -->
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12"
+      id="artists-grid"
+    >
+      {
+        artists.length > 0 ? (
+          artists.map((artist) => (
+            <div class="artist-card-wrapper" data-category={artist.category}>
+              <ArtistCard
+                name={artist.name}
+                category={artist.category}
+                image={artist.image}
+                slug={artist.slug}
+              />
+            </div>
+          ))
+        ) : (
+          <div class="col-span-full text-center py-32 bg-violet-50/50 border-2 border-dashed border-violet-100">
+            <p class="text-2xl font-serif text-violet-300 uppercase tracking-widest">
+              Nessun artista trovato in questa categoria
+            </p>
+            <p class="text-gray-400 mt-4 font-light">
+              Presto nuovi talenti verranno aggiunti alla selezione ufficiale.
+            </p>
           </div>
-        ))
-      ) : (
-        <div class="col-span-full text-center py-12">
-          <p class="text-xl text-gray-600">Presto nuovi artisti in arrivo...</p>
-        </div>
-      )}
+        )
+      }
     </div>
   </section>
 </Layout>
 
 <script>
-  // Filtri lato client
-  const filterButtons = document.querySelectorAll('[data-filter]');
-  const artistCards = document.querySelectorAll('.artist-card');
+  // Advanced Filtering Logic
+  const filterButtons = document.querySelectorAll("[data-filter]");
+  const artistCards = document.querySelectorAll(".artist-card-wrapper");
 
-  filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const selectedCategory = button.getAttribute('data-category');
-      
-      // Aggiorna stile bottoni
-      filterButtons.forEach(b => {
-        b.classList.remove('bg-gray-900', 'text-white');
-        b.classList.add('bg-gray-200', 'text-gray-900');
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const selectedCategory = button.getAttribute("data-category");
+
+      // Update Button Styles
+      filterButtons.forEach((b) => {
+        b.classList.remove(
+          "bg-deepviolet-950",
+          "text-white",
+          "border-deepviolet-950",
+        );
+        b.classList.add(
+          "bg-transparent",
+          "text-deepviolet-900",
+          "border-violet-200",
+        );
       });
-      button.classList.remove('bg-gray-200', 'text-gray-900');
-      button.classList.add('bg-gray-900', 'text-white');
-      
-      // Filtra card
-      artistCards.forEach(card => {
-        const cardCategory = card.getAttribute('data-category');
-        if (selectedCategory === 'Tutti' || cardCategory === selectedCategory) {
-          card.style.display = 'block';
-          card.classList.add('animate-fade-in');
+      button.classList.remove(
+        "bg-transparent",
+        "text-deepviolet-900",
+        "border-violet-200",
+      );
+      button.classList.add(
+        "bg-deepviolet-950",
+        "text-white",
+        "border-deepviolet-950",
+      );
+
+      // Animate & Filter
+      artistCards.forEach((card) => {
+        const cardCategory = card.getAttribute("data-category");
+        if (selectedCategory === "Tutti" || cardCategory === selectedCategory) {
+          card.classList.remove("hidden");
+          setTimeout(() => {
+            (card as HTMLElement).style.opacity = "1";
+            (card as HTMLElement).style.transform = "translateY(0)";
+          }, 10);
         } else {
-          card.style.display = 'none';
+          (card as HTMLElement).style.opacity = "0";
+          (card as HTMLElement).style.transform = "translateY(20px)";
+          setTimeout(() => {
+            card.classList.add("hidden");
+          }, 400);
         }
       });
     });
@@ -96,16 +173,9 @@ const artists = allArtists.map(artist => ({
 </script>
 
 <style>
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  .animate-fade-in {
-    animation: fadeIn 0.3s ease-in;
+  .artist-card-wrapper {
+    transition:
+      opacity 0.4s ease,
+      transform 0.4s ease;
   }
 </style>

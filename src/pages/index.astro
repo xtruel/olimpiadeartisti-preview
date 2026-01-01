@@ -2,237 +2,279 @@
 import Layout from "../layouts/Layout.astro";
 
 const title = "Olimpiade degli Artisti | Talenti Creativi ed Eccellenze";
-const description = "Una piattaforma curatoriale per valorizzare opere creative, talenti ed eccellenze.";
+const description =
+  "Una piattaforma curatoriale per valorizzare opere creative, talenti ed eccellenze.";
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <Layout title={title} description={description}>
-  <!-- Hero Premium -->
-  <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-deepviolet-950">
+  <!-- Hero Section Platinum -->
+  <section
+    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-deepviolet-950"
+  >
+    <!-- Sophisticated Background -->
     <div class="absolute inset-0 z-0">
-      <img 
-        src="/olimpiadeartisti-preview/hero_purple.svg" 
-        alt="Institutional Backdrop" 
-        class="w-full h-full object-cover opacity-60"
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-deepviolet-950 via-deepviolet-900/40 to-deepviolet-950 z-10"
+      >
+      </div>
+      <img
+        src={`${baseUrl}/hero_purple.svg`}
+        alt="Institutional Backdrop"
+        class="w-full h-full object-cover opacity-30 scale-110 animate-slow-zoom"
       />
-      <div class="absolute inset-0 hero-overlay"></div>
+      <div class="absolute inset-0 hero-overlay opacity-60"></div>
     </div>
-    
-    <div class="relative z-10 max-w-5xl mx-auto px-4 text-center mt-[-10vh]">
-      <div class="inline-block mb-6 animate-fade-in">
-        <span class="block text-gold-400 font-serif text-lg md:text-xl tracking-[0.5em] uppercase mb-2">Le</span>
-        <h1 class="text-6xl md:text-9xl font-serif font-bold text-white tracking-tight mb-4 drop-shadow-2xl">
-          OLIMPIADI <br class="hidden md:block"> DEGLI ARTISTI
-        </h1>
-        <div class="w-32 h-1 bg-gold-500 mx-auto"></div>
-      </div>
-      
-      <p class="text-xl md:text-3xl font-serif text-violet-100 mb-12 tracking-wide max-w-3xl mx-auto leading-relaxed">
-        Talenti Creativi ed Eccellenze <br>
-        <span class="text-lg md:text-xl font-sans font-light uppercase tracking-[0.3em] block mt-4 text-gold-300">
-          Premio <span class="at-symbol">@</span> OSC<span class="at-symbol">@</span>R <span class="at-symbol">@</span> Artisti – Referendum Online
+
+    <div class="relative z-20 max-w-6xl mx-auto px-4 text-center">
+      <div class="inline-block mb-8 animate-fade-in-up">
+        <span
+          class="block text-gold-400 font-sans text-xs md:text-sm tracking-[0.8em] uppercase mb-4 opacity-80"
+        >
+          International Cultural Project
         </span>
-      </p>
-      
-      <div class="glass-card p-8 md:p-12 max-w-3xl mx-auto rounded-none border-t-4 border-gold-500 shadow-2xl bg-deepviolet-900/40 backdrop-blur-xl border-white/10">
-        <p class="text-lg md:text-xl text-white leading-relaxed font-light italic">
-          "Un progetto culturale internazionale ispirato ai Giochi Olimpici
-          dell'antica Grecia, fondato sui valori della Pace, della Bellezza e
-          della Volontà Popolare."
-        </p>
+        <h1
+          class="text-5xl md:text-8xl lg:text-9xl font-serif font-bold text-white tracking-tighter mb-6 drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)] leading-[0.9]"
+        >
+          OLIMPIADE <br class="hidden md:block" />
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-gold-200 via-gold-500 to-gold-200"
+            >DEGLI ARTISTI</span
+          >
+        </h1>
+        <div class="flex items-center justify-center space-x-4">
+          <div
+            class="h-[1px] w-12 md:w-24 bg-gradient-to-r from-transparent to-gold-500"
+          >
+          </div>
+          <div class="w-3 h-3 rotate-45 border border-gold-500"></div>
+          <div
+            class="h-[1px] w-12 md:w-24 bg-gradient-to-l from-transparent to-gold-500"
+          >
+          </div>
+        </div>
       </div>
+
+      <p
+        class="text-xl md:text-2xl font-serif text-violet-100/90 mb-8 tracking-wide max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-200"
+      >
+        Celebriamo l'eccellenza attraverso i valori della <br />
+        <span class="text-gold-300 font-semibold"
+          >Pace, Bellezza e Volontà Popolare.</span
+        >
+      </p>
+
+      <div class="mb-12 animate-fade-in-up delay-300">
+        <span
+          class="text-sm md:text-base font-sans font-light uppercase tracking-[0.4em] inline-block px-6 py-2 border-y border-gold-500/30 text-gold-200"
+        >
+          Premio <span class="at-symbol text-gold-500 font-bold">@</span> OSC<span
+            class="at-symbol text-gold-500 font-bold">@</span
+          >R <span class="at-symbol text-gold-500 font-bold">@</span> Artisti – Referendum
+          Online
+        </span>
+      </div>
+
+      <div
+        class="flex flex-col sm:flex-row items-center justify-center gap-6 animate-fade-in-up delay-300"
+      >
+        <a
+          href={`${baseUrl}/artisti`}
+          class="group relative px-8 py-4 bg-gold-500 text-deepviolet-950 font-bold uppercase tracking-widest overflow-hidden transition-all duration-500 hover:shadow-[0_0_30px_rgba(245,158,11,0.4)]"
+        >
+          <span class="relative z-10 flex items-center">
+            Esplora le Opere
+            <svg
+              class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </span>
+          <div
+            class="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500"
+          >
+          </div>
+        </a>
+        <a
+          href={`${baseUrl}/contatti`}
+          class="group px-8 py-4 border border-white/30 text-white font-bold uppercase tracking-widest backdrop-blur-sm hover:bg-white hover:text-deepviolet-950 transition-all duration-500"
+        >
+          Candidati Ora
+        </a>
+      </div>
+    </div>
+
+    <!-- Decorative bottom fade -->
+    <div
+      class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent"
+    >
     </div>
   </section>
 
-  <!-- Manifesto Section -->
-  <section class="py-24 md:py-32 bg-white relative">
-    <div class="absolute top-0 right-0 w-1/3 h-full bg-violet-50/50 -z-10"></div>
+  <!-- Manifesto Platinum -->
+  <section class="py-32 bg-white relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-        <div class="relative">
-          <img 
-            src="/olimpiadeartisti-preview/peace.svg" 
-            alt="Pace e Cultura" 
-            class="shadow-2xl rounded-sm border-8 border-violet-100/50"
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+        <div class="relative group">
+          <div
+            class="absolute -inset-4 bg-gold-100/50 rounded-lg -z-10 group-hover:scale-105 transition-transform duration-700"
+          >
+          </div>
+          <img
+            src={`${baseUrl}/peace.svg`}
+            alt="Pace e Cultura"
+            class="w-full shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000"
           />
-          <div class="absolute -bottom-10 -right-10 w-48 h-48 bg-violet-200/30 -z-10 hidden lg:block"></div>
+          <div
+            class="absolute -bottom-8 -right-8 w-48 h-48 border-b-2 border-r-2 border-gold-400 -z-10 hidden lg:block"
+          >
+          </div>
         </div>
-        <div class="space-y-8">
-          <div class="space-y-2">
-            <span class="text-violet-600 font-semibold uppercase tracking-widest text-sm">🌍 Il Manifesto</span>
-            <h2 class="text-4xl md:text-5xl font-serif font-bold text-deepviolet-900 uppercase">
-              Progetto Culturale<br>Internazionale
+
+        <div class="space-y-10">
+          <div class="inline-block border-l-4 border-gold-500 pl-6">
+            <span
+              class="text-violet-600 font-bold uppercase tracking-widest text-xs mb-2 block"
+              >Il Nostro Valore</span
+            >
+            <h2
+              class="text-4xl md:text-6xl font-serif font-bold text-deepviolet-950 uppercase leading-none"
+            >
+              Manifesto <br />
+              <span class="text-gold-600">Universale</span>
             </h2>
           </div>
-          <p class="text-lg text-gray-700 leading-relaxed">
-            Ispirato ai Giochi Olimpici dell'antica Grecia, questo progetto nasce per celebrare 
-            l'eccellenza artistica attraverso i valori universali della <strong>Pace</strong>, 
-            della <strong>Bellezza</strong> e della <strong>Volontà Popolare</strong>.
-          </p>
-          <p class="text-lg text-gray-700 leading-relaxed">
-            Una piattaforma dove talenti creativi possono emergere, essere riconosciuti 
-            e valorizzati dalla comunità internazionale attraverso un sistema democratico 
-            di valutazione e referendum online.
-          </p>
-          <a 
-            href="/olimpiadeartisti-preview/progetto" 
-            class="inline-flex items-center text-violet-600 font-semibold hover:text-violet-800 transition-colors group"
+          <div
+            class="space-y-6 text-lg text-gray-700 leading-relaxed font-light"
           >
-            Scopri il Manifesto Completo
-            <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
+            <p>
+              Ispirato ai Giochi Olimpici dell'antica Grecia, questo progetto
+              nasce per celebrare l'eccellenza artistica attraverso i valori
+              universali della <strong>Pace</strong>, della <strong
+                >Bellezza</strong
+              > e della <strong>Democrazia</strong>.
+            </p>
+            <p>
+              Una piattaforma dove il talento non è solo osservato, ma
+              partecipato dalla collettività, creando un ponte tra l'eredità
+              classica e l'innovazione contemporanea.
+            </p>
+          </div>
+          <a
+            href={`${baseUrl}/progetto`}
+            class="inline-flex items-center text-deepviolet-900 font-bold uppercase tracking-widest text-sm hover:text-gold-600 transition-colors group"
+          >
+            Approfondisci il Manifesto
+            <div
+              class="ml-3 w-10 h-[1px] bg-gold-500 group-hover:w-16 transition-all duration-500"
+            >
+            </div>
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Vision Section -->
-  <section class="py-24 md:py-32 bg-gradient-to-br from-violet-50 to-gold-50/30">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-        <div class="space-y-8 order-2 lg:order-1">
-          <div class="space-y-2">
-            <span class="text-gold-600 font-semibold uppercase tracking-widest text-sm">✨ La Visione</span>
-            <h2 class="text-4xl md:text-5xl font-serif font-bold text-deepviolet-900 uppercase">
-              Arte, Cultura<br>& Democrazia
-            </h2>
-          </div>
-          <p class="text-lg text-gray-700 leading-relaxed">
-            Creiamo un ecosistema dove l'arte incontra la tecnologia, dove la tradizione 
-            si fonde con l'innovazione, e dove ogni cittadino può partecipare attivamente 
-            alla valorizzazione del patrimonio culturale contemporaneo.
-          </p>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="bg-white/80 p-6 rounded-lg border border-violet-100">
-              <h3 class="font-serif font-bold text-deepviolet-900 mb-2">🎨 15 Categorie</h3>
-              <p class="text-sm text-gray-600">Pittura, Scultura, Fotografia, Design e molte altre discipline artistiche</p>
-            </div>
-            <div class="bg-white/80 p-6 rounded-lg border border-violet-100">
-              <h3 class="font-serif font-bold text-deepviolet-900 mb-2">🌐 Referendum Online</h3>
-              <p class="text-sm text-gray-600">Votazione democratica aperta a tutti per scegliere le eccellenze</p>
-            </div>
-          </div>
-        </div>
-        <div class="relative order-1 lg:order-2">
-          <img 
-            src="/olimpiadeartisti-preview/vision_purple.svg" 
-            alt="Visione Artistica" 
-            class="shadow-2xl rounded-sm border-8 border-gold-100/50"
-          />
-          <div class="absolute -top-10 -left-10 w-48 h-48 bg-gold-200/30 -z-10 hidden lg:block"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Categorie Premium -->
-  <section class="py-24 md:py-32 bg-deepviolet-950 relative overflow-hidden">
+  <!-- Categories Section -->
+  <section class="py-32 bg-deepviolet-950 relative overflow-hidden">
     <div class="absolute inset-0 opacity-10">
-      <img src="/olimpiadeartisti-preview/greece_purple.svg" alt="Background" class="w-full h-full object-cover"/>
+      <img
+        src={`${baseUrl}/greece_purple.svg`}
+        alt="Classic Pattern"
+        class="w-full h-full object-cover scale-150 rotate-3"
+      />
     </div>
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <span class="text-gold-400 font-semibold uppercase tracking-widest text-sm">🏛️ Le Discipline</span>
-        <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mt-4 mb-6 uppercase">
-          15 Categorie Artistiche
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4">
+      <div class="text-center mb-24">
+        <h2 class="text-4xl md:text-6xl font-serif font-bold text-white mb-6">
+          DISCIPLINE ARTISTICHE
         </h2>
-        <p class="text-xl text-violet-200 max-w-3xl mx-auto">
-          Ogni forma d'arte ha il suo spazio, ogni talento la sua opportunità di brillare
-        </p>
+        <div class="w-24 h-1 bg-gold-500 mx-auto"></div>
       </div>
-      
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-        {[
-          "🎨 Pittura", "🗿 Scultura", "📸 Fotografia", "✏️ Design", "🖼️ Illustrazione",
-          "🎭 Grafica", "🏺 Ceramica", "🧵 Tessile", "🎬 Video", "🏗️ Installazione",
-          "🎪 Performance", "📚 Arte Digitale", "🎵 Arte Sonora", "🌿 Land Art", "💎 Gioielleria"
-        ].map((cat) => {
-          const [emoji, ...nameParts] = cat.split(' ');
-          const name = nameParts.join(' ');
-          return (
-            <div class="group bg-white/10 backdrop-blur-sm p-6 rounded-lg text-center hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-gold-400/50">
-              <div class="text-3xl mb-3 group-hover:scale-110 transition-transform">{emoji}</div>
-              <p class="font-semibold text-white text-sm uppercase tracking-wide">{name}</p>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+        {
+          [
+            "Pittura",
+            "Scultura",
+            "Fotografia",
+            "Design",
+            "Illustrazione",
+            "Grafica",
+            "Ceramica",
+            "Tessile",
+            "Video",
+            "Digital Art",
+            "Performance",
+            "Installazione",
+            "Musica",
+            "Architettura",
+            "Moda",
+          ].map((name, i) => (
+            <div class="glass-dark p-8 group hover:border-gold-500 transition-all duration-500 cursor-default">
+              <span class="block text-gold-500/30 text-4xl font-serif mb-4 group-hover:text-gold-500 transition-colors">
+                0{i + 1}
+              </span>
+              <h3 class="text-white font-serif uppercase tracking-widest text-lg group-hover:translate-x-2 transition-transform duration-500">
+                {name}
+              </h3>
             </div>
-          );
-        })}
+          ))
+        }
       </div>
     </div>
   </section>
 
-  <!-- CTA Premium -->
-  <section class="py-24 md:py-32 bg-gradient-to-r from-violet-600 to-gold-600 relative overflow-hidden">
-    <div class="absolute inset-0 bg-black/20"></div>
-    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-4xl md:text-6xl font-serif font-bold text-white mb-6 uppercase tracking-tight">
-        Sei un Artista?
+  <!-- Final CTA -->
+  <section class="py-32 relative overflow-hidden bg-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2
+        class="text-4xl md:text-7xl font-serif font-bold text-deepviolet-950 mb-8 uppercase"
+      >
+        Porta la tua Arte <br /> nel Futuro
       </h2>
-      <p class="text-xl md:text-2xl text-violet-100 mb-12 leading-relaxed">
-        Unisciti alla comunità internazionale di talenti creativi.<br>
-        <span class="text-gold-200 font-light">La tua arte merita di essere riconosciuta.</span>
+      <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
+        Sottoponi la tua candidatura per far parte della collezione ufficiale e
+        partecipare al referendum popolare.
       </p>
-      
-      <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-        <a 
-          href="/olimpiadeartisti-preview/artisti" 
-          class="group bg-white text-violet-600 px-10 py-4 rounded-none font-bold uppercase tracking-wide hover:bg-gold-100 transition-all duration-300 shadow-2xl border-2 border-transparent hover:border-gold-400"
-        >
-          <span class="flex items-center">
-            Esplora le Eccellenze
-            <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-            </svg>
-          </span>
-        </a>
-        
-        <a 
-          href="/olimpiadeartisti-preview/contatti" 
-          class="group bg-transparent border-2 border-white text-white px-10 py-4 rounded-none font-bold uppercase tracking-wide hover:bg-white hover:text-violet-600 transition-all duration-300"
-        >
-          <span class="flex items-center">
-            Candidati Ora
-            <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-            </svg>
-          </span>
-        </a>
-      </div>
+
+      <a
+        href={`${baseUrl}/contatti`}
+        class="inline-block px-12 py-5 bg-deepviolet-900 text-white font-bold uppercase tracking-widest hover:bg-gold-600 transition-all duration-500 shadow-xl"
+      >
+        Inizia la Candidatura
+      </a>
     </div>
   </section>
 </Layout>
 
 <style>
-  .animate-fade-in {
-    animation: fadeIn 1.5s ease-out;
-  }
-  
-  @keyframes fadeIn {
+  @keyframes slow-zoom {
     0% {
-      opacity: 0;
-      transform: translateY(20px);
+      transform: scale(1.1);
     }
     100% {
-      opacity: 1;
-      transform: translateY(0);
+      transform: scale(1.2);
     }
   }
-  
+
+  .animate-slow-zoom {
+    animation: slow-zoom 20s ease-in-out infinite alternate;
+  }
+
   .hero-overlay {
-    background: linear-gradient(135deg, 
-      rgba(88, 28, 135, 0.8) 0%, 
-      rgba(124, 58, 237, 0.6) 50%, 
-      rgba(168, 85, 247, 0.4) 100%
+    background: radial-gradient(
+      circle at center,
+      transparent 0%,
+      rgba(30, 11, 68, 0.8) 100%
     );
-  }
-  
-  .glass-card {
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-  }
-  
-  .at-symbol {
-    color: #f59e0b;
-    font-weight: bold;
   }
 </style>

@@ -1,57 +1,168 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <Layout title="Contatti - Olimpiade degli Artisti">
-  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-    <h1 class="text-5xl font-serif font-bold text-gray-900 mb-12">Contatti</h1>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-      <!-- Informazioni -->
-      <div>
-        <h2 class="text-2xl font-serif font-bold text-gray-900 mb-6">Informazioni</h2>
-        <div class="space-y-6">
-          <div>
-            <h3 class="font-semibold text-gray-900 mb-2">Email</h3>
-            <a href="mailto:info@olimpiadeartisti.net" class="text-gray-700 hover:text-gray-900 transition">
+  <!-- Header Section -->
+  <section class="relative py-24 bg-deepviolet-950 overflow-hidden text-center">
+    <div class="absolute inset-0 z-0">
+      <img
+        src={`${baseUrl}/hero_purple.svg`}
+        alt=""
+        class="w-full h-full object-cover opacity-20"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-deepviolet-950 via-deepviolet-900/60 to-white z-10"
+      >
+      </div>
+    </div>
+    <div class="relative z-20 max-w-7xl mx-auto px-4">
+      <span
+        class="text-gold-400 font-bold uppercase tracking-[0.5em] text-xs mb-4 block"
+        >Entra in Contatto</span
+      >
+      <h1
+        class="text-5xl md:text-7xl font-serif font-bold text-white mb-6 uppercase tracking-tight"
+      >
+        Partecipa
+      </h1>
+      <div class="w-24 h-1 bg-gold-500 mx-auto"></div>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-24">
+      <!-- Info Column -->
+      <div class="space-y-12">
+        <div>
+          <h2
+            class="text-3xl font-serif font-bold text-deepviolet-950 mb-8 uppercase tracking-wider"
+          >
+            Informazioni <br /> Istituzionali
+          </h2>
+          <p class="text-gray-600 leading-relaxed mb-10 font-light text-lg">
+            La nostra segreteria organizzativa è a disposizione per chiarimenti
+            sulle procedure di candidatura, sulle categorie del referendum e
+            sulle modalità di partecipazione alle Olimpiadi degli Artisti.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="p-8 border-l-2 border-gold-500 bg-violet-50/50">
+            <h3
+              class="text-xs font-bold uppercase tracking-widest text-violet-400 mb-2"
+            >
+              Canale Diretto
+            </h3>
+            <a
+              href="mailto:info@olimpiadeartisti.net"
+              class="text-deepviolet-950 font-serif font-bold hover:text-gold-600 transition-colors"
+            >
               info@olimpiadeartisti.net
             </a>
           </div>
-          <div>
-            <h3 class="font-semibold text-gray-900 mb-2">Telefono</h3>
-            <a href="tel:+393388103984" class="text-gray-700 hover:text-gray-900 transition">
+          <div class="p-8 border-l-2 border-gold-500 bg-violet-50/50">
+            <h3
+              class="text-xs font-bold uppercase tracking-widest text-violet-400 mb-2"
+            >
+              Segreteria
+            </h3>
+            <a
+              href="tel:+393388103984"
+              class="text-deepviolet-950 font-serif font-bold hover:text-gold-600 transition-colors"
+            >
               +39 338 810 39 84
             </a>
           </div>
-          <div>
-            <h3 class="font-semibold text-gray-900 mb-2">Social</h3>
-            <div class="space-y-2">
-              <a href="#" class="block text-gray-700 hover:text-gray-900 transition">Instagram</a>
-              <a href="#" class="block text-gray-700 hover:text-gray-900 transition">Facebook</a>
-              <a href="#" class="block text-gray-700 hover:text-gray-900 transition">LinkedIn</a>
-            </div>
+        </div>
+
+        <div class="pt-8">
+          <h3
+            class="text-xs font-bold uppercase tracking-widest text-violet-400 mb-6"
+          >
+            Seguici sulle Piattaforme
+          </h3>
+          <div class="flex space-x-6">
+            {
+              ["Instagram", "Facebook", "LinkedIn"].map((social) => (
+                <a
+                  href="#"
+                  class="text-deepviolet-900 font-bold uppercase tracking-widest text-xs hover:text-gold-500 transition-colors"
+                >
+                  {social}
+                </a>
+              ))
+            }
           </div>
         </div>
       </div>
 
-      <!-- Form -->
-      <div>
-        <h2 class="text-2xl font-serif font-bold text-gray-900 mb-6">Inviaci un Messaggio</h2>
-        <form class="space-y-4">
-          <div>
-            <label for="name" class="block text-sm font-semibold text-gray-900 mb-2">Nome</label>
-            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900" required />
+      <!-- Form Column -->
+      <div
+        class="bg-white p-10 md:p-16 border border-violet-100 shadow-2xl relative"
+      >
+        <div
+          class="absolute -top-4 -right-4 w-24 h-24 border-t-2 border-r-2 border-gold-400 opacity-20"
+        >
+        </div>
+        <h2
+          class="text-2xl font-serif font-bold text-deepviolet-950 mb-10 uppercase tracking-widest text-center"
+        >
+          Inviaci la tua <br /> Candidatura
+        </h2>
+
+        <form class="space-y-8">
+          <div class="group">
+            <label
+              for="name"
+              class="block text-[10px] font-bold uppercase tracking-widest text-violet-400 mb-2 group-focus-within:text-gold-500 transition-colors"
+              >Nome e Cognome</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="w-full bg-violet-50/30 border-b border-violet-100 px-0 py-4 focus:outline-none focus:border-gold-500 transition-colors font-serif"
+              placeholder="Inserisci il tuo nome..."
+              required
+            />
           </div>
-          <div>
-            <label for="email" class="block text-sm font-semibold text-gray-900 mb-2">Email</label>
-            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900" required />
+          <div class="group">
+            <label
+              for="email"
+              class="block text-[10px] font-bold uppercase tracking-widest text-violet-400 mb-2 group-focus-within:text-gold-500 transition-colors"
+              >Indirizzo Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="w-full bg-violet-50/30 border-b border-violet-100 px-0 py-4 focus:outline-none focus:border-gold-500 transition-colors font-serif"
+              placeholder="iltuo@email.com"
+              required
+            />
           </div>
-          <div>
-            <label for="message" class="block text-sm font-semibold text-gray-900 mb-2">Messaggio</label>
-            <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900" required></textarea>
+          <div class="group">
+            <label
+              for="message"
+              class="block text-[10px] font-bold uppercase tracking-widest text-violet-400 mb-2 group-focus-within:text-gold-500 transition-colors"
+              >Messaggio o Proposta</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              class="w-full bg-violet-50/30 border-b border-violet-100 px-0 py-4 focus:outline-none focus:border-gold-500 transition-colors font-serif resize-none"
+              placeholder="Descrivi brevemente il tuo progetto..."
+              required></textarea>
           </div>
-          <button type="submit" class="w-full bg-gray-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition">
-            Invia
+
+          <button
+            type="submit"
+            class="w-full bg-deepviolet-950 text-white px-8 py-5 font-bold uppercase tracking-[0.2em] hover:bg-gold-600 transition-all duration-500 shadow-xl"
+          >
+            Invia Richiesta
           </button>
         </form>
       </div>

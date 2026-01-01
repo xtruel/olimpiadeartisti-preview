@@ -1,58 +1,156 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
-<Layout title="Il Progetto - Olimpiade degli Artisti">
-  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-    <h1 class="text-5xl font-serif font-bold text-gray-900 mb-8">Il Progetto</h1>
-    
-    <div class="prose prose-lg max-w-none text-gray-700 space-y-8">
-      <div>
-        <h2 class="text-3xl font-serif font-bold text-gray-900 mb-4">Missione</h2>
-        <p>
-          Olimpiade degli Artisti nasce con l'obiettivo di creare uno spazio dedicato alla valorizzazione di opere creative e talenti artistici di eccellenza. Vogliamo dare visibilità a artisti meritevoli e costruire una comunità che celebra la creatività in tutte le sue forme.
-        </p>
+<Layout title="Il Manifesto - Olimpiade degli Artisti">
+  <!-- Page Header -->
+  <section class="relative py-24 bg-deepviolet-950 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img
+        src={`${baseUrl}/hero_purple.svg`}
+        alt=""
+        class="w-full h-full object-cover opacity-20"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-deepviolet-950 via-transparent to-white z-10"
+      >
+      </div>
+    </div>
+
+    <div class="relative z-20 max-w-7xl mx-auto px-4 text-center">
+      <span
+        class="text-gold-400 font-bold uppercase tracking-[0.5em] text-xs mb-4 block"
+        >Tradizione & Visione</span
+      >
+      <h1
+        class="text-5xl md:text-7xl font-serif font-bold text-white mb-6 uppercase tracking-tight"
+      >
+        Il Manifesto
+      </h1>
+      <div class="w-24 h-1 bg-gold-500 mx-auto"></div>
+    </div>
+  </section>
+
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+      <!-- Sidebar Navigation / Quick Info -->
+      <div class="lg:col-span-4 space-y-12">
+        <div class="p-8 border border-violet-100 bg-violet-50/30">
+          <h3
+            class="font-serif text-xl font-bold text-deepviolet-950 mb-6 uppercase tracking-wider border-b border-gold-500 pb-2 inline-block"
+          >
+            Pilastri
+          </h3>
+          <ul class="space-y-4">
+            {
+              [
+                "Pace Universale",
+                "Bellezza Estetica",
+                "Volontà Popolare",
+                "Eccellenza Creativa",
+              ].map((item) => (
+                <li class="flex items-center text-deepviolet-900 font-bold text-sm uppercase tracking-widest">
+                  <span class="w-2 h-2 bg-gold-500 mr-3" /> {item}
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+
+        <div class="relative group">
+          <img
+            src={`${baseUrl}/peace.svg`}
+            alt="Institutional Symbol"
+            class="w-full shadow-xl grayscale group-hover:grayscale-0 transition-all duration-700"
+          />
+        </div>
       </div>
 
-      <div>
-        <h2 class="text-3xl font-serif font-bold text-gray-900 mb-4">Come Funziona</h2>
-        <ol class="list-decimal list-inside space-y-3">
-          <li>Artisti e creativi si candidano presentando le loro opere</li>
-          <li>Le candidature vengono valutate da una giuria di esperti</li>
-          <li>Le opere selezionate vengono pubblicate sulla piattaforma</li>
-          <li>La comunità scopre e supporta i talenti emergenti</li>
-          <li>Premi e riconoscimenti per le eccellenze</li>
-        </ol>
-      </div>
+      <!-- Main Content -->
+      <div class="lg:col-span-8 space-y-16">
+        <div
+          class="prose prose-lg max-w-none text-gray-700 leading-relaxed font-light"
+        >
+          <h2
+            class="text-3xl font-serif font-bold text-deepviolet-950 mb-8 uppercase tracking-wide"
+          >
+            La Nostra Missione
+          </h2>
+          <p
+            class="text-xl italic text-deepviolet-800/70 border-l-4 border-gold-500 pl-8 mb-10"
+          >
+            "Olimpiade degli Artisti nasce per creare uno spazio sacro alla
+            valorizzazione del talento creativo, ispirato ai valori immortali
+            della civiltà classica."
+          </p>
+          <p>
+            Vogliamo dare voce a quegli artisti che, attraverso il loro lavoro,
+            contribuiscono alla costruzione di un mondo più armonioso. Non è
+            solo un concorso, ma un vero e proprio referendum sulla bellezza,
+            dove la qualità e il merito tornano al centro del dibattito
+            culturale.
+          </p>
 
-      <div>
-        <h2 class="text-3xl font-serif font-bold text-gray-900 mb-4">Categorie Artistiche</h2>
-        <p>
-          Accogliamo candidature in diverse categorie artistiche:
-        </p>
-        <ul class="list-disc list-inside space-y-2 mt-4">
-          <li>Pittura e Disegno</li>
-          <li>Scultura e Installazione</li>
-          <li>Fotografia</li>
-          <li>Design e Grafica</li>
-          <li>Illustrazione</li>
-          <li>Ceramica e Arti Applicate</li>
-          <li>Tessile e Moda</li>
-          <li>Video e Animazione</li>
-          <li>Arti Digitali</li>
-          <li>Performance e Arti Performative</li>
-        </ul>
-      </div>
+          <h2
+            class="py-12 text-3xl font-serif font-bold text-deepviolet-950 uppercase tracking-wide"
+          >
+            Il Metodo Olimpico
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 not-prose">
+            {
+              [
+                {
+                  title: "Candidatura",
+                  desc: "Processo selettivo aperto a tutte le discipline creative.",
+                },
+                {
+                  title: "Curatela",
+                  desc: "Valutazione attenta da parte di una commissione d'eccellenza.",
+                },
+                {
+                  title: "Esposizione",
+                  desc: "Presentazione internazionale attraverso la nostra piattaforma.",
+                },
+                {
+                  title: "Referendum",
+                  desc: "Votazione democratica per l'assegnazione del Premio @OSC@R.",
+                },
+              ].map((step, i) => (
+                <div class="p-6 bg-white border-t-2 border-transparent hover:border-gold-500 transition-all shadow-sm">
+                  <span class="text-gold-500 font-serif text-2xl">
+                    0{i + 1}.
+                  </span>
+                  <h4 class="font-serif font-bold text-deepviolet-950 uppercase mt-2">
+                    {step.title}
+                  </h4>
+                  <p class="text-sm text-gray-500 mt-2">{step.desc}</p>
+                </div>
+              ))
+            }
+          </div>
 
-      <div>
-        <h2 class="text-3xl font-serif font-bold text-gray-900 mb-4">Perché Partecipare</h2>
-        <ul class="list-disc list-inside space-y-2">
-          <li>Visibilità presso una comunità di appassionati d'arte</li>
-          <li>Riconoscimento da parte di esperti del settore</li>
-          <li>Opportunità di networking con altri artisti</li>
-          <li>Possibilità di premi e riconoscimenti</li>
-          <li>Supporto nella promozione delle tue opere</li>
-        </ul>
+          <h2
+            class="py-12 text-3xl font-serif font-bold text-deepviolet-950 uppercase tracking-wide"
+          >
+            Partecipazione
+          </h2>
+          <p>
+            Ogni artista partecipante diventa ambasciatore di un nuovo
+            Rinascimento. La piattaforma favorisce il networking, il
+            riconoscimento professionale e la promozione delle opere presso
+            galleristi, collezionisti e istituzioni internazionali.
+          </p>
+        </div>
+
+        <div class="pt-12 text-center">
+          <a
+            href={`${baseUrl}/contatti`}
+            class="inline-block px-10 py-4 bg-deepviolet-950 text-white font-bold uppercase tracking-widest hover:bg-gold-600 transition-all duration-500"
+          >
+            Candidati al Progetto
+          </a>
+        </div>
       </div>
     </div>
   </section>

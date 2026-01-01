@@ -5,24 +5,48 @@ import { getCollection } from "astro:content";
 const posts = (await getCollection("posts")).sort(
   (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
 );
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <Layout
   title="News - Olimpiade degli Artisti"
   description="Leggi gli ultimi articoli e aggiornamenti da Olimpiade degli Artisti"
 >
-  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-    <h1 class="text-5xl font-serif font-bold text-gray-900 mb-12">
-      News e Articoli
-    </h1>
+  <!-- Header Section -->
+  <section class="relative py-24 bg-deepviolet-950 overflow-hidden text-center">
+    <div class="absolute inset-0 z-0">
+      <img
+        src={`${baseUrl}/hero_purple.svg`}
+        alt=""
+        class="w-full h-full object-cover opacity-20"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-deepviolet-950 via-deepviolet-900/60 to-white z-10"
+      >
+      </div>
+    </div>
+    <div class="relative z-20 max-w-7xl mx-auto px-4">
+      <span
+        class="text-gold-400 font-bold uppercase tracking-[0.5em] text-xs mb-4 block"
+        >Archivio & Cronaca</span
+      >
+      <h1
+        class="text-5xl md:text-7xl font-serif font-bold text-white mb-6 uppercase tracking-tight"
+      >
+        Cultura & Eventi
+      </h1>
+      <div class="w-24 h-1 bg-gold-500 mx-auto"></div>
+    </div>
+  </section>
 
-    <div class="space-y-12">
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <div class="space-y-24">
       {
         posts.length > 0 ? (
           posts.map((post) => (
-            <article class="border-b border-gray-200 pb-12">
-              <div class="mb-4">
-                <span class="text-sm text-gray-600">
+            <article class="group grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+              <div class="md:col-span-4 border-l-2 border-violet-100 pl-8 py-2">
+                <span class="block text-gold-600 font-bold text-xs uppercase tracking-[0.3em] mb-4">
                   {post.data.date.toLocaleDateString("it-IT", {
                     year: "numeric",
                     month: "long",
@@ -30,31 +54,50 @@ const posts = (await getCollection("posts")).sort(
                   })}
                 </span>
                 {post.data.author && (
-                  <span class="text-sm text-gray-600 ml-4">
-                    di {post.data.author}
+                  <span class="text-[10px] text-gray-400 uppercase tracking-widest block">
+                    Editoriale di {post.data.author}
                   </span>
                 )}
               </div>
-              <h2 class="text-3xl font-serif font-bold text-gray-900 mb-4">
-                {post.data.title}
-              </h2>
-              {post.data.description && (
-                <p class="text-lg text-gray-700 mb-4">
-                  {post.data.description}
-                </p>
-              )}
-              <a
-                href={`${import.meta.env.BASE_URL}/news/${post.slug}`}
-                class="text-gray-900 font-semibold hover:text-gray-700 transition"
-              >
-                Leggi di più →
-              </a>
+
+              <div class="md:col-span-8">
+                <h2 class="text-3xl font-serif font-bold text-deepviolet-950 mb-6 group-hover:text-gold-600 transition-colors leading-tight">
+                  {post.data.title}
+                </h2>
+                {post.data.description && (
+                  <p class="text-lg text-gray-600 mb-8 font-light leading-relaxed">
+                    {post.data.description}
+                  </p>
+                )}
+                <a
+                  href={`${baseUrl}/news/${post.slug}`}
+                  class="inline-flex items-center text-deepviolet-900 font-bold uppercase tracking-widest text-xs hover:text-gold-600 transition-all group/link"
+                >
+                  Approfondisci l'articolo
+                  <svg
+                    class="ml-3 w-5 h-5 group-hover/link:translate-x-2 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </a>
+              </div>
             </article>
           ))
         ) : (
-          <div class="text-center py-12">
-            <p class="text-xl text-gray-600">
-              Nessun articolo disponibile al momento.
+          <div class="text-center py-32 bg-violet-50/30 border border-violet-100">
+            <p class="text-2xl font-serif text-violet-300 uppercase tracking-widest">
+              Archivio in fase di aggiornamento
+            </p>
+            <p class="text-gray-400 mt-4 font-light">
+              Le cronache delle edizioni passate saranno disponibili a breve.
             </p>
           </div>
         )
