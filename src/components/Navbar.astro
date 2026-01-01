@@ -7,24 +7,34 @@
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Main Header with Logo -->
-    <div class="flex flex-col items-center py-6 border-b border-violet-50/50">
+    <div class="flex flex-col items-center py-8">
       <a
         href={`${import.meta.env.BASE_URL}/`}
-        class="group flex flex-col items-center text-center space-y-1"
+        class="group flex flex-col items-center text-center space-y-2"
       >
         <span
-          class="text-[9px] tracking-[0.6em] uppercase text-violet-400 font-bold group-hover:text-gold-500 transition-all duration-500"
+          class="text-[10px] tracking-[0.8em] uppercase text-gold-600 font-bold group-hover:text-gold-400 transition-all duration-700 opacity-80"
         >
-          Progetto Culturale Internazionale
+          International Cultural Project
         </span>
         <h1
-          class="text-3xl md:text-5xl font-serif font-bold text-deepviolet-950 tracking-tight leading-tight"
+          class="text-3xl md:text-5xl font-serif font-bold text-deepviolet-950 tracking-[0.1em] leading-tight drop-shadow-sm"
         >
-          OLIMPIADE DEGLI ARTISTI
+          OLIMPIADE <span class="text-gold-600">DEGLI</span> ARTISTI
         </h1>
-        <div
-          class="w-24 h-[1px] bg-gold-500 transform scale-x-50 group-hover:scale-x-150 transition-transform duration-700 ease-in-out"
-        >
+        <div class="flex items-center space-x-4 w-full">
+          <div
+            class="h-[1px] flex-1 bg-gradient-to-r from-transparent via-gold-400/50 to-transparent"
+          >
+          </div>
+          <div
+            class="w-2 h-2 rotate-45 border border-gold-400 opacity-50 group-hover:rotate-180 transition-transform duration-1000"
+          >
+          </div>
+          <div
+            class="h-[1px] flex-1 bg-gradient-to-r from-transparent via-gold-400/50 to-transparent"
+          >
+          </div>
         </div>
       </a>
     </div>
