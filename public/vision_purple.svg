@@ -1,0 +1,47 @@
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="visionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f1f5f9;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="eyeGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4c1d95;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <rect width="600" height="400" fill="url(#visionGradient)" rx="8"/>
+  
+  <!-- Occhio stilizzato per la visione -->
+  <g transform="translate(300,200)">
+    <ellipse cx="0" cy="0" rx="120" ry="60" fill="none" stroke="#7c3aed" stroke-width="4"/>
+    <circle cx="0" cy="0" r="40" fill="url(#eyeGradient)"/>
+    <circle cx="0" cy="0" r="20" fill="#f59e0b"/>
+    <circle cx="8" cy="-8" r="6" fill="#ffffff" opacity="0.8"/>
+  </g>
+  
+  <!-- Raggi di luce -->
+  <g opacity="0.4" stroke="#f59e0b" stroke-width="2">
+    <line x1="300" y1="50" x2="300" y2="20"/>
+    <line x1="420" y1="80" x2="440" y2="60"/>
+    <line x1="480" y1="200" x2="510" y2="200"/>
+    <line x1="420" y1="320" x2="440" y2="340"/>
+    <line x1="300" y1="350" x2="300" y2="380"/>
+    <line x1="180" y1="320" x2="160" y2="340"/>
+    <line x1="120" y1="200" x2="90" y2="200"/>
+    <line x1="180" y1="80" x2="160" y2="60"/>
+  </g>
+  
+  <!-- Elementi artistici -->
+  <g opacity="0.2">
+    <rect x="50" y="50" width="30" height="30" fill="#7c3aed" transform="rotate(45 65 65)"/>
+    <circle cx="520" cy="80" r="15" fill="#f59e0b"/>
+    <polygon points="80,350 100,320 120,350 110,370 90,370" fill="#fbbf24"/>
+    <rect x="500" y="320" width="25" height="25" fill="#7c3aed" transform="rotate(30 512.5 332.5)"/>
+  </g>
+  
+  <!-- Testo -->
+  <text x="300" y="370" text-anchor="middle" font-family="serif" font-size="20" font-weight="bold" fill="#4c1d95">
+    VISIONE • INNOVAZIONE • FUTURO
+  </text>
+</svg>

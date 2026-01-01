@@ -1,0 +1,51 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="greeceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2e1065;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#4c1d95;stop-opacity:0.05" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="800" fill="url(#greeceGradient)"/>
+  
+  <!-- Colonne greche stilizzate -->
+  <g opacity="0.1" fill="#7c3aed">
+    <!-- Colonna 1 -->
+    <rect x="200" y="200" width="40" height="400"/>
+    <rect x="190" y="190" width="60" height="20"/>
+    <rect x="185" y="600" width="70" height="30"/>
+    
+    <!-- Colonna 2 -->
+    <rect x="350" y="150" width="40" height="450"/>
+    <rect x="340" y="140" width="60" height="20"/>
+    <rect x="335" y="600" width="70" height="30"/>
+    
+    <!-- Colonna 3 -->
+    <rect x="500" y="180" width="40" height="420"/>
+    <rect x="490" y="170" width="60" height="20"/>
+    <rect x="485" y="600" width="70" height="30"/>
+    
+    <!-- Colonna 4 -->
+    <rect x="650" y="160" width="40" height="440"/>
+    <rect x="640" y="150" width="60" height="20"/>
+    <rect x="635" y="600" width="70" height="30"/>
+    
+    <!-- Colonna 5 -->
+    <rect x="800" y="190" width="40" height="410"/>
+    <rect x="790" y="180" width="60" height="20"/>
+    <rect x="785" y="600" width="70" height="30"/>
+  </g>
+  
+  <!-- Frontone triangolare -->
+  <g opacity="0.08" fill="#f59e0b">
+    <polygon points="150,200 450,50 750,200"/>
+  </g>
+  
+  <!-- Decorazioni geometriche greche -->
+  <g opacity="0.06" stroke="#7c3aed" stroke-width="2" fill="none">
+    <pattern id="greekPattern" patternUnits="userSpaceOnUse" width="50" height="50">
+      <path d="M0,25 L12.5,25 L12.5,12.5 L25,12.5 L25,0 L37.5,0 L37.5,12.5 L50,12.5"/>
+    </pattern>
+    <rect x="0" y="0" width="1200" height="800" fill="url(#greekPattern)"/>
+  </g>
+</svg>

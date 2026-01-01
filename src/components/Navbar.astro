@@ -1,24 +1,55 @@
 ---
 ---
 
-<nav class="sticky top-0 z-50 bg-white border-b border-gray-200">
+<nav class="sticky top-0 z-[100] bg-white/95 backdrop-blur-md border-b border-violet-100 shadow-sm">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-16">
-      <a href={import.meta.env.BASE_URL} class="text-2xl font-serif font-bold text-gray-900">
-        Olimpiade degli Artisti
+    <!-- Header principale con logo -->
+    <div class="flex flex-col items-center py-5 border-b border-violet-50">
+      <a href="/olimpiadeartisti-preview" class="group flex flex-col items-center text-center space-y-1">
+        <span class="text-[10px] tracking-[0.5em] uppercase text-violet-400 font-bold group-hover:text-gold-500 transition-colors">
+          Project Cultural International
+        </span>
+        <h1 class="text-3xl md:text-5xl font-serif font-bold text-deepviolet-900 tracking-tighter leading-none">
+          OLIMPIADE DEGLI ARTISTI
+        </h1>
+        <div class="w-32 h-0.5 bg-gold-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-in-out"></div>
       </a>
-      <ul class="hidden md:flex space-x-8">
-        <li><a href={import.meta.env.BASE_URL} class="text-gray-700 hover:text-gray-900 transition">Home</a></li>
-        <li><a href={import.meta.env.BASE_URL + "/progetto"} class="text-gray-700 hover:text-gray-900 transition">Il Progetto</a></li>
-        <li><a href={import.meta.env.BASE_URL + "/artisti"} class="text-gray-700 hover:text-gray-900 transition">Artisti</a></li>
-        <li><a href={import.meta.env.BASE_URL + "/news"} class="text-gray-700 hover:text-gray-900 transition">News</a></li>
-        <li><a href={import.meta.env.BASE_URL + "/contatti"} class="text-gray-700 hover:text-gray-900 transition">Contatti</a></li>
+    </div>
+    
+    <!-- Menu di navigazione -->
+    <div class="flex justify-center h-14">
+      <ul class="flex items-center space-x-6 lg:space-x-14">
+        <li>
+          <a href="/olimpiadeartisti-preview/" class="text-[11px] font-bold uppercase tracking-[0.3em] text-deepviolet-900 hover:text-gold-600 transition-all duration-300 relative group">
+            Home
+            <span class="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-gold-400 group-hover:w-full transition-all duration-500"></span>
+          </a>
+        </li>
+        <li>
+          <a href="/olimpiadeartisti-preview/progetto" class="text-[11px] font-bold uppercase tracking-[0.3em] text-deepviolet-900 hover:text-gold-600 transition-all duration-300 relative group">
+            Manifesto
+            <span class="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-gold-400 group-hover:w-full transition-all duration-500"></span>
+          </a>
+        </li>
+        <li>
+          <a href="/olimpiadeartisti-preview/artisti" class="text-[11px] font-bold uppercase tracking-[0.3em] text-deepviolet-900 hover:text-gold-600 transition-all duration-300 relative group">
+            Eccellenze
+            <span class="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-gold-400 group-hover:w-full transition-all duration-500"></span>
+          </a>
+        </li>
+        <li>
+          <a href="/olimpiadeartisti-preview/news" class="text-[11px] font-bold uppercase tracking-[0.3em] text-deepviolet-900 hover:text-gold-600 transition-all duration-300 relative group">
+            News
+            <span class="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-gold-400 group-hover:w-full transition-all duration-500"></span>
+          </a>
+        </li>
+        <li>
+          <a href="/olimpiadeartisti-preview/contatti" class="text-[11px] font-bold uppercase tracking-[0.3em] text-deepviolet-900 hover:text-gold-600 transition-all duration-300 relative group">
+            Partecipa
+            <span class="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-gold-400 group-hover:w-full transition-all duration-500"></span>
+          </a>
+        </li>
       </ul>
-      <button class="md:hidden text-gray-700">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
     </div>
   </div>
 </nav>

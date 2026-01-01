@@ -1,1 +1,142 @@
 @import "tailwindcss";
+
+/* Colori personalizzati per Olimpiade degli Artisti */
+:root {
+  --deepviolet-50: #f5f3ff;
+  --deepviolet-100: #ede9fe;
+  --deepviolet-200: #ddd6fe;
+  --deepviolet-300: #c4b5fd;
+  --deepviolet-400: #a78bfa;
+  --deepviolet-500: #8b5cf6;
+  --deepviolet-600: #7c3aed;
+  --deepviolet-700: #6d28d9;
+  --deepviolet-800: #5b21b6;
+  --deepviolet-900: #4c1d95;
+  --deepviolet-950: #2e1065;
+  
+  --gold-50: #fffbeb;
+  --gold-100: #fef3c7;
+  --gold-200: #fde68a;
+  --gold-300: #fcd34d;
+  --gold-400: #fbbf24;
+  --gold-500: #f59e0b;
+  --gold-600: #d97706;
+  --gold-700: #b45309;
+  --gold-800: #92400e;
+  --gold-900: #78350f;
+}
+
+/* Classi utility personalizzate */
+.text-deepviolet-50 { color: var(--deepviolet-50); }
+.text-deepviolet-100 { color: var(--deepviolet-100); }
+.text-deepviolet-200 { color: var(--deepviolet-200); }
+.text-deepviolet-300 { color: var(--deepviolet-300); }
+.text-deepviolet-400 { color: var(--deepviolet-400); }
+.text-deepviolet-500 { color: var(--deepviolet-500); }
+.text-deepviolet-600 { color: var(--deepviolet-600); }
+.text-deepviolet-700 { color: var(--deepviolet-700); }
+.text-deepviolet-800 { color: var(--deepviolet-800); }
+.text-deepviolet-900 { color: var(--deepviolet-900); }
+.text-deepviolet-950 { color: var(--deepviolet-950); }
+
+.bg-deepviolet-50 { background-color: var(--deepviolet-50); }
+.bg-deepviolet-100 { background-color: var(--deepviolet-100); }
+.bg-deepviolet-200 { background-color: var(--deepviolet-200); }
+.bg-deepviolet-300 { background-color: var(--deepviolet-300); }
+.bg-deepviolet-400 { background-color: var(--deepviolet-400); }
+.bg-deepviolet-500 { background-color: var(--deepviolet-500); }
+.bg-deepviolet-600 { background-color: var(--deepviolet-600); }
+.bg-deepviolet-700 { background-color: var(--deepviolet-700); }
+.bg-deepviolet-800 { background-color: var(--deepviolet-800); }
+.bg-deepviolet-900 { background-color: var(--deepviolet-900); }
+.bg-deepviolet-950 { background-color: var(--deepviolet-950); }
+
+.text-gold-50 { color: var(--gold-50); }
+.text-gold-100 { color: var(--gold-100); }
+.text-gold-200 { color: var(--gold-200); }
+.text-gold-300 { color: var(--gold-300); }
+.text-gold-400 { color: var(--gold-400); }
+.text-gold-500 { color: var(--gold-500); }
+.text-gold-600 { color: var(--gold-600); }
+.text-gold-700 { color: var(--gold-700); }
+.text-gold-800 { color: var(--gold-800); }
+.text-gold-900 { color: var(--gold-900); }
+
+.bg-gold-50 { background-color: var(--gold-50); }
+.bg-gold-100 { background-color: var(--gold-100); }
+.bg-gold-200 { background-color: var(--gold-200); }
+.bg-gold-300 { background-color: var(--gold-300); }
+.bg-gold-400 { background-color: var(--gold-400); }
+.bg-gold-500 { background-color: var(--gold-500); }
+.bg-gold-600 { background-color: var(--gold-600); }
+.bg-gold-700 { background-color: var(--gold-700); }
+.bg-gold-800 { background-color: var(--gold-800); }
+.bg-gold-900 { background-color: var(--gold-900); }
+
+.border-deepviolet-50 { border-color: var(--deepviolet-50); }
+.border-deepviolet-100 { border-color: var(--deepviolet-100); }
+.border-deepviolet-200 { border-color: var(--deepviolet-200); }
+.border-deepviolet-300 { border-color: var(--deepviolet-300); }
+.border-deepviolet-400 { border-color: var(--deepviolet-400); }
+.border-deepviolet-500 { border-color: var(--deepviolet-500); }
+.border-deepviolet-600 { border-color: var(--deepviolet-600); }
+.border-deepviolet-700 { border-color: var(--deepviolet-700); }
+.border-deepviolet-800 { border-color: var(--deepviolet-800); }
+.border-deepviolet-900 { border-color: var(--deepviolet-900); }
+.border-deepviolet-950 { border-color: var(--deepviolet-950); }
+
+.border-gold-50 { border-color: var(--gold-50); }
+.border-gold-100 { border-color: var(--gold-100); }
+.border-gold-200 { border-color: var(--gold-200); }
+.border-gold-300 { border-color: var(--gold-300); }
+.border-gold-400 { border-color: var(--gold-400); }
+.border-gold-500 { border-color: var(--gold-500); }
+.border-gold-600 { border-color: var(--gold-600); }
+.border-gold-700 { border-color: var(--gold-700); }
+
+/* Font serif per titoli */
+.font-serif {
+  font-family: 'Cinzel', 'Times New Roman', serif;
+}
+
+/* Effetti speciali */
+.backdrop-blur-md {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.backdrop-blur-xl {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+/* Animazioni personalizzate */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .text-responsive-xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .text-responsive-xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
