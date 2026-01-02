@@ -1,0 +1,80 @@
+[
+    {
+        "id": "op1",
+        "titolo": "Frammenti di Luce",
+        "artista": "Marco Rossi",
+        "categoria": "Pittura",
+        "tecnica": "Olio su tela",
+        "tags": [
+            "astratto",
+            "colori caldi",
+            "luce"
+        ],
+        "immagine": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=400"
+    },
+    {
+        "id": "op2",
+        "titolo": "Il Silenzio del Marmo",
+        "artista": "Elena Bianchi",
+        "categoria": "Scultura",
+        "tecnica": "Marmo di Carrara",
+        "tags": [
+            "classico",
+            "bianco",
+            "scultura"
+        ],
+        "immagine": "https://images.unsplash.com/photo-1554188248-986adbb73be4?q=80&w=400"
+    },
+    {
+        "id": "op3",
+        "titolo": "Onde Digitali",
+        "artista": "Sofia Verga",
+        "categoria": "Digital Art",
+        "tecnica": "Rendering 3D",
+        "tags": [
+            "moderno",
+            "blu",
+            "tecnologia"
+        ],
+        "immagine": "https://images.unsplash.com/photo-1633167606207-d840b5070fc2?q=80&w=400"
+    },
+    {
+        "id": "op4",
+        "titolo": "Riflessi Urbani",
+        "artista": "Luca Martini",
+        "categoria": "Fotografia",
+        "tecnica": "Stampa Fine Art",
+        "tags": [
+            "architettura",
+            "nero",
+            "città"
+        ],
+        "immagine": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=400"
+    },
+    {
+        "id": "op5",
+        "titolo": "Geometrie dell'Anima",
+        "artista": "Giulia Moretti",
+        "categoria": "Pittura",
+        "tecnica": "Acrilico",
+        "tags": [
+            "geometria",
+            "minimal",
+            "moderno"
+        ],
+        "immagine": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=400"
+    },
+    {
+        "id": "op6",
+        "titolo": "Sinfonia di Colori",
+        "artista": "Alessandro Neri",
+        "categoria": "Pittura",
+        "tecnica": "Acquerello",
+        "tags": [
+            "natura",
+            "colori vivaci",
+            "luce"
+        ],
+        "immagine": "https://images.unsplash.com/photo-1549490349-8643362247b5?q=80&w=400"
+    }
+]
