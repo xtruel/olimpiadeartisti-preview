@@ -1,0 +1,175 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Architettura Futura">
+    <section class="py-32 bg-white">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-24">
+                <span
+                    class="text-gold-600 font-bold uppercase tracking-[0.4em] text-xs block mb-4"
+                    >Scalability Roadmap</span
+                >
+                <h1
+                    class="text-4xl md:text-6xl font-serif font-bold text-deepviolet-950 uppercase mb-6"
+                >
+                    Architettura <span class="text-gold-600">Scalabile</span>
+                </h1>
+                <div class="w-16 h-1 bg-gold-500 mx-auto"></div>
+                <p class="mt-8 text-gray-400 max-w-2xl mx-auto text-sm italic">
+                    "Progettiamo oggi le fondamenta per le sfide globali di
+                    domani."
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-24">
+                <div class="space-y-6">
+                    <h3
+                        class="font-serif font-bold text-deepviolet-950 uppercase border-l-4 border-gold-500 pl-6"
+                    >
+                        Cloud Native
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        L’applicazione è concepita per risiedere su
+                        infrastrutture cloud distribuite, garantendo ridondanza
+                        e tempi di risposta minimi in ogni continente.
+                    </p>
+                </div>
+                <div class="space-y-6">
+                    <h3
+                        class="font-serif font-bold text-deepviolet-950 uppercase border-l-4 border-gold-500 pl-6"
+                    >
+                        Microservizi
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Separazione netta tra gestione opere, utenti, pagamenti
+                        e intelligenza artificiale per facilitare aggiornamenti
+                        e manutenzione.
+                    </p>
+                </div>
+                <div class="space-y-6">
+                    <h3
+                        class="font-serif font-bold text-deepviolet-950 uppercase border-l-4 border-gold-500 pl-6"
+                    >
+                        Security First
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Crittografia end-to-end, firma digitale delle opere e
+                        integrazione con gateway di pagamento certificati
+                        (Stripe/PayPal).
+                    </p>
+                </div>
+            </div>
+
+            <!-- Architecture Diagram (Simplified) -->
+            <div
+                class="museum-block p-12 bg-deepviolet-950 text-white border-none mb-24"
+            >
+                <h2
+                    class="text-2xl font-serif font-bold uppercase text-gold-500 mb-12 text-center"
+                >
+                    Modello dei Servizi
+                </h2>
+                <div class="relative py-12">
+                    <div class="flex flex-col items-center gap-8">
+                        <!-- Client Layer -->
+                        <div
+                            class="px-8 py-3 border border-gold-400 text-gold-400 font-bold uppercase text-[10px] tracking-widest"
+                        >
+                            Client (Web / Mobile / VR)
+                        </div>
+                        <div class="w-[2px] h-8 bg-gold-400/30"></div>
+                        <!-- API Gateway -->
+                        <div
+                            class="px-8 py-3 bg-white text-deepviolet-950 font-bold uppercase text-[10px] tracking-widest shadow-[0_0_30px_rgba(255,255,255,0.2)]"
+                        >
+                            API Gateway & Auth
+                        </div>
+                        <div class="w-[2px] h-8 bg-gold-400/30"></div>
+                        <!-- Core Services -->
+                        <div
+                            class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full"
+                        >
+                            {
+                                [
+                                    "Servizio Opere",
+                                    "Gestione Utenti",
+                                    "AI & ML Core",
+                                    "Payments API",
+                                ].map((service) => (
+                                    <div class="p-4 border border-white/10 bg-white/5 text-center text-[9px] font-bold uppercase tracking-widest">
+                                        {service}
+                                    </div>
+                                ))
+                            }
+                        </div>
+                        <div class="w-[2px] h-8 bg-gold-400/30"></div>
+                        <!-- Data Layer -->
+                        <div
+                            class="px-8 py-3 border border-violet-400 text-violet-400 font-bold uppercase text-[10px] tracking-widest"
+                        >
+                            PostgreSQL / Redis / Cloud Storage
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phases Table -->
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr>
+                            <th
+                                class="p-6 bg-violet-50 text-[10px] font-bold uppercase tracking-widest text-deepviolet-900 border-b border-violet-100 italic"
+                                >Fase</th
+                            >
+                            <th
+                                class="p-6 bg-violet-50 text-[10px] font-bold uppercase tracking-widest text-deepviolet-900 border-b border-violet-100 italic"
+                                >Obiettivo</th
+                            >
+                            <th
+                                class="p-6 bg-violet-50 text-[10px] font-bold uppercase tracking-widest text-deepviolet-900 border-b border-violet-100 italic"
+                                >Tecnologia Key</th
+                            >
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm">
+                        <tr class="border-b border-gray-100">
+                            <td class="p-6 font-bold text-deepviolet-950"
+                                >Fase 0 (Attuale)</td
+                            >
+                            <td class="p-6 text-gray-600"
+                                >Piattaforma Statica & Vetrina Istituzionale</td
+                            >
+                            <td class="p-6 text-gold-600 font-bold"
+                                >Astro / Tailwind</td
+                            >
+                        </tr>
+                        <tr class="border-b border-gray-100">
+                            <td class="p-6 font-bold text-deepviolet-950"
+                                >Fase 1 (Roadmap)</td
+                            >
+                            <td class="p-6 text-gray-600"
+                                >Backend, Database, Dashboards Personali</td
+                            >
+                            <td class="p-6 text-gold-600 font-bold"
+                                >Node.js / PostgreSQL</td
+                            >
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-bold text-deepviolet-950"
+                                >Fase 2 (Vision)</td
+                            >
+                            <td class="p-6 text-gray-600"
+                                >AI Avanzata, VR Gallery, Global Search</td
+                            >
+                            <td class="p-6 text-gold-600 font-bold"
+                                >Python ML / WebGL</td
+                            >
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</Layout>

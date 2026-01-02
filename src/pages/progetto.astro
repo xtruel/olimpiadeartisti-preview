@@ -1,0 +1,145 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Il Progetto">
+    <section class="py-32 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-24">
+                <span
+                    class="text-gold-600 font-bold uppercase tracking-[0.4em] text-xs block mb-4"
+                    >Visione Culturale</span
+                >
+                <h1
+                    class="text-4xl md:text-7xl font-serif font-bold text-deepviolet-950 uppercase leading-tight mt-4"
+                >
+                    Nuova Enciclopedia <span class="text-gold-600">Online</span>
+                </h1>
+                <div class="w-16 h-1 bg-gold-500 mx-auto mt-8"></div>
+            </div>
+
+            <div class="space-y-16">
+                <!-- Manifesto -->
+                <div class="museum-block p-10">
+                    <h2
+                        class="text-2xl font-serif font-bold text-deepviolet-950 uppercase mb-6"
+                    >
+                        Lo Scopo
+                    </h2>
+                    <p class="text-gray-700 leading-relaxed italic mb-6">
+                        "Un nuovo strumento culturale per aumentare le
+                        possibilità di chi ha idee e ingegno creativo e non ha
+                        'Voce', o di chi non ha trovato lo spazio necessario per
+                        farsi conoscere."
+                    </p>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        L'Associazione Culturale "SelfPedia" nasce come un
+                        servizio web al servizio di tutti: donne e uomini
+                        famosi, talenti, emergenti, esordienti e semplici
+                        cittadini, italiani e stranieri. Rivolto soprattutto a
+                        chi non trova spazi sui vari palcoscenici del mondo
+                        perché irrimediabilmente occupati.
+                    </p>
+                </div>
+
+                <!-- Categories List -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="space-y-6">
+                        <h3
+                            class="text-xl font-serif font-bold text-deepviolet-950 uppercase border-l-4 border-gold-500 pl-6"
+                        >
+                            Cosa Pubblichiamo
+                        </h3>
+                        <div class="grid grid-cols-1 gap-3">
+                            {
+                                [
+                                    "1 – Scritti e Opere Culturali",
+                                    "2 – Opere Musicali e di Spettacolo",
+                                    "3 – Belle Arti, Moda & Design",
+                                    "4 – Tecnologie Innovative & Scienza",
+                                    "5 – Autobiografie e Saggi",
+                                    "6 – Sport, Atleti, Campioni",
+                                    "7 – Messaggi Politici e Sociali",
+                                    "8 – Blog, Post, Tweet",
+                                    "9 – Il mio fedele Amico",
+                                    "10 – Messaggi d’Amore e Addio",
+                                    "11 – A modo mio",
+                                    "12 – School News (Studenti)",
+                                    "13 – La mia Tesi di Laurea",
+                                ].map((cat) => (
+                                    <div class="p-3 bg-violet-50 text-deepviolet-950 font-bold uppercase text-[10px] tracking-widest border border-violet-100">
+                                        {cat}
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </div>
+
+                    <div class="space-y-8">
+                        <h3
+                            class="text-xl font-serif font-bold text-deepviolet-950 uppercase border-l-4 border-gold-500 pl-6"
+                        >
+                            A chi è rivolto
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Il servizio è aperto a tutti, italiani e stranieri,
+                            senza distinzione di cultura, religione o
+                            provenienza. Invitiamo esordienti, emergenti e
+                            talenti a presentare il proprio ingegno.
+                        </p>
+                        <div class="p-8 bg-gold-50 border border-gold-100">
+                            <h4
+                                class="font-serif font-bold text-deepviolet-950 uppercase mb-4"
+                            >
+                                La Garanzia
+                            </h4>
+                            <p
+                                class="text-gray-600 text-xs leading-relaxed italic"
+                            >
+                                "Da un piccolo seme può nascere un bel fiore.
+                                Molte cose potrebbero non apparire di grande
+                                interesse oggi, ma il tempo ne svelerà il
+                                valore."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tesi di Laurea Focus -->
+                <div
+                    class="museum-block p-12 bg-deepviolet-950 text-white border-none"
+                >
+                    <style>
+                        .bg-deepviolet-950::before {
+                            background: var(--gold-500);
+                        }
+                    </style>
+                    <h2
+                        class="text-2xl font-serif font-bold uppercase text-gold-500 mb-8"
+                    >
+                        Focus: Tesi di Laurea
+                    </h2>
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-violet-100/70"
+                    >
+                        <ul class="space-y-4">
+                            <li>• Qualifica il tuo Curriculum Vitale</li>
+                            <li>• Protegge dal Plagio con data certa</li>
+                            <li>
+                                • Consente l'accesso a Editori e Ricercatori
+                            </li>
+                        </ul>
+                        <ul class="space-y-4">
+                            <li>
+                                • Rappresenta la tua presentazione accademica
+                                all'estero
+                            </li>
+                            <li>• Consultabile da chiunque, per sempre</li>
+                            <li>• Diritto d'Autore garantito</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>

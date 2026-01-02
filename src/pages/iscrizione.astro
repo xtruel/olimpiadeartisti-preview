@@ -1,0 +1,133 @@
+---
+import Layout from "../layouts/Layout.astro";
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<Layout title="Iscrizione">
+    <section class="py-32 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-20">
+                <span
+                    class="text-gold-600 font-bold uppercase tracking-[0.4em] text-xs block mb-4"
+                    >Join the Network</span
+                >
+                <h1
+                    class="text-4xl md:text-6xl font-serif font-bold text-deepviolet-950 uppercase mb-6"
+                >
+                    Procedura di <span class="text-gold-600">Iscrizione</span>
+                </h1>
+                <div class="w-16 h-1 bg-gold-500 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-20">
+                <!-- Requirements -->
+                <div class="space-y-8">
+                    <h2
+                        class="text-2xl font-serif font-bold text-deepviolet-950 uppercase"
+                    >
+                        A) Cosa serve
+                    </h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <span class="text-gold-500 font-bold">01.</span>
+                            <span class="text-gray-600 text-sm"
+                                >Dati anagrafici e contatti aggiornati.</span
+                            >
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="text-gold-500 font-bold">02.</span>
+                            <span class="text-gray-600 text-sm"
+                                >Scelta della Categoria di Pubblicazione (dalla
+                                Categoria Ordinaria alla Premium).</span
+                            >
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="text-gold-500 font-bold">03.</span>
+                            <span class="text-gray-600 text-sm"
+                                >Materiale da pubblicare (link Google Drive,
+                                portfolio digitale, o invio via email).</span
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Invio -->
+                <div class="space-y-8">
+                    <h2
+                        class="text-2xl font-serif font-bold text-deepviolet-950 uppercase"
+                    >
+                        C) Invio Modulo
+                    </h2>
+                    <div
+                        class="p-8 border border-violet-100 bg-violet-50/30 space-y-6"
+                    >
+                        <p class="text-gray-600 text-sm italic">
+                            Puoi inviare tutto il materiale e il modulo firmato
+                            tramite i seguenti canali:
+                        </p>
+                        <div class="space-y-4">
+                            <a
+                                href="mailto:studio.futuro@virgilio.it"
+                                class="flex flex-col group"
+                            >
+                                <span
+                                    class="text-[10px] uppercase font-bold text-gold-600"
+                                    >Email Ufficiale</span
+                                >
+                                <span
+                                    class="text-deepviolet-950 font-bold group-hover:text-gold-500 transition-colors"
+                                    >studio.futuro@virgilio.it</span
+                                >
+                            </a>
+                            <a
+                                href="tel:+393388103984"
+                                class="flex flex-col group"
+                            >
+                                <span
+                                    class="text-[10px] uppercase font-bold text-gold-600"
+                                    >Segreteria Operativa</span
+                                >
+                                <span
+                                    class="text-deepviolet-950 font-bold group-hover:text-gold-500 transition-colors"
+                                    >+39 338 810 39 84</span
+                                >
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Download -->
+            <div
+                class="museum-block p-12 text-center shadow-xl border-violet-100 mb-20"
+            >
+                <h2
+                    class="text-2xl font-serif font-bold text-deepviolet-950 uppercase mb-4"
+                >
+                    B) Scarica il Modulo
+                </h2>
+                <p class="text-gray-500 text-sm mb-10 italic">
+                    Compila la richiesta di adesione ufficiale in ogni sua
+                    parte.
+                </p>
+                <a
+                    href={`${baseUrl}/download/richiesta-di-adesione.pdf`}
+                    class="inline-block px-12 py-5 bg-gold-500 text-deepviolet-950 font-bold uppercase tracking-widest text-sm hover:translate-y-[-2px] hover:shadow-2xl transition-all"
+                >
+                    Scarica "Richiesta di adesione" (PDF)
+                </a>
+            </div>
+
+            <!-- Privacy -->
+            <div class="text-center pt-8 border-t border-gray-100">
+                <p
+                    class="text-[10px] uppercase tracking-widest text-gray-400 font-bold italic"
+                >
+                    D) Privacy: "I dati sono usati esclusivamente per le
+                    finalità associative e di pubblicazione nel rispetto delle
+                    normative vigenti."
+                </p>
+            </div>
+        </div>
+    </section>
+</Layout>

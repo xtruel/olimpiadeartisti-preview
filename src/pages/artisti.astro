@@ -1,0 +1,55 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Categorie Artistiche">
+    <section class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-24">
+                <span
+                    class="text-gold-600 font-bold uppercase tracking-[0.4em] text-xs block mb-4"
+                    >Discovery</span
+                >
+                <h1
+                    class="text-4xl md:text-6xl font-serif font-bold text-deepviolet-950 uppercase mb-6"
+                >
+                    Ambiti di <span class="text-gold-600">Pubblicazione</span>
+                </h1>
+                <div class="w-16 h-1 bg-gold-500 mx-auto"></div>
+            </div>
+
+            <div
+                class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-px bg-violet-100"
+            >
+                {
+                    [
+                        { id: "I", name: "Pittura" },
+                        { id: "II", name: "Scultura" },
+                        { id: "III", name: "Fotografia" },
+                        { id: "IV", name: "Design" },
+                        { id: "V", name: "Illustrazione" },
+                        { id: "VI", name: "Grafica" },
+                        { id: "VII", name: "Ceramica" },
+                        { id: "VIII", name: "Tessile" },
+                        { id: "IX", name: "Video" },
+                        { id: "X", name: "Digital Art" },
+                        { id: "XI", name: "Performance" },
+                        { id: "XII", name: "Installazione" },
+                        { id: "XIII", name: "Musica" },
+                        { id: "XIV", name: "Architettura" },
+                        { id: "XV", name: "Moda" },
+                    ].map((item) => (
+                        <div class="bg-white p-10 group hover:bg-gold-50 transition-colors cursor-default">
+                            <span class="block text-gold-500 text-xs font-serif mb-4 font-bold tracking-widest">
+                                {item.id}
+                            </span>
+                            <h3 class="text-deepviolet-950 font-serif font-bold uppercase tracking-widest text-lg group-hover:translate-x-2 transition-all duration-500">
+                                {item.name}
+                            </h3>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+</Layout>

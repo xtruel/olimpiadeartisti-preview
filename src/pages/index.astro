@@ -1,0 +1,324 @@
+---
+import Layout from "../layouts/Layout.astro";
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<Layout title="Home">
+    <!-- Hero Section -->
+    <section
+        class="relative min-h-[95vh] flex items-center justify-center overflow-hidden bg-deepviolet-950 px-4"
+    >
+        <div class="absolute inset-0 z-0">
+            <div
+                class="absolute inset-0 bg-gradient-to-b from-deepviolet-950 via-deepviolet-900/40 to-deepviolet-950 z-10"
+            >
+            </div>
+            <!-- Canvas Texture Background -->
+            <img
+                src={`${baseUrl}/images/canvas_texture.png`}
+                alt=""
+                class="absolute inset-0 w-full h-full object-cover opacity-20"
+            />
+            <div
+                class="absolute inset-0 bg-radial-gradient(circle at center, transparent 0%, rgba(30,11,68,0.9) 100%) opacity-60"
+            >
+            </div>
+        </div>
+
+        <div class="relative z-20 max-w-6xl mx-auto text-center py-20">
+            <div class="inline-block mb-10 animate-fade-in-up">
+                <span
+                    class="block text-gold-400 font-sans text-sm tracking-[0.8em] uppercase mb-4 opacity-80"
+                >
+                    International Cultural Project
+                </span>
+                <h1
+                    class="text-5xl md:text-8xl lg:text-9xl font-serif font-bold text-white tracking-tighter mb-6 uppercase leading-none"
+                >
+                    OLIMPIADE <br class="hidden md:block" />
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-gold-200 via-gold-500 to-gold-200"
+                        >DEGLI ARTISTI</span
+                    >
+                </h1>
+                <div class="flex items-center justify-center space-x-4">
+                    <div
+                        class="h-[1px] w-24 bg-gradient-to-r from-transparent to-gold-500"
+                    >
+                    </div>
+                    <div class="w-3 h-3 rotate-45 border border-gold-500"></div>
+                    <div
+                        class="h-[1px] w-24 bg-gradient-to-l from-transparent to-gold-500"
+                    >
+                    </div>
+                </div>
+            </div>
+
+            <p
+                class="text-xl md:text-2xl font-serif text-violet-100/90 mb-12 tracking-wide max-w-3xl mx-auto leading-relaxed animate-fade-in-up"
+            >
+                Una piattaforma curatoriale d'élite per la <span
+                    class="text-gold-300 italic"
+                    >diffusione delle Opere Creative internazionali.</span
+                >
+            </p>
+
+            <div class="flex flex-col items-center gap-8 animate-fade-in-up">
+                <div
+                    class="flex flex-col sm:flex-row items-center justify-center gap-6 w-full px-4"
+                >
+                    <a
+                        href={`${baseUrl}/download/richiesta-di-adesione.pdf`}
+                        class="group relative px-10 py-4 bg-gold-500 text-deepviolet-950 font-bold uppercase tracking-widest transition-all hover:shadow-[0_0_40px_rgba(245,158,11,0.5)]"
+                    >
+                        Scarica modulo adesione (PDF)
+                    </a>
+                    <a
+                        href={`${baseUrl}/contatti`}
+                        class="px-10 py-4 border border-white/30 text-white font-bold uppercase tracking-widest backdrop-blur-md hover:bg-white hover:text-deepviolet-950 transition-all"
+                    >
+                        Richiedi Informazioni
+                    </a>
+                </div>
+
+                <!-- Trust Line -->
+                <div
+                    class="flex flex-wrap items-center justify-center gap-4 md:gap-8 text-[10px] md:text-xs text-gold-400 uppercase tracking-widest font-bold bg-white/5 py-3 px-6 rounded-full border border-white/10 backdrop-blur-sm"
+                >
+                    <span>✅ Periodo di prova 30 giorni gratuito</span>
+                    <span class="hidden md:block opacity-30">|</span>
+                    <span>✅ Diritti d’autore sempre dell’artista</span>
+                    <span class="hidden md:block opacity-30">|</span>
+                    <span>✅ Pagamento dopo pubblicazione e verifica</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Museum Guarantees Block -->
+    <section class="py-24 bg-white relative">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="museum-block p-12 shadow-xl border-violet-100">
+                <span
+                    class="text-gold-600 font-bold uppercase tracking-[0.4em] text-xs block mb-6 text-center"
+                    >Protocollo di Tutela</span
+                >
+                <h2
+                    class="text-3xl md:text-5xl font-serif font-bold text-deepviolet-950 uppercase mb-12 text-center"
+                >
+                    Garanzie per <span class="text-gold-600">l'Artista</span>
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10">
+                    <div class="space-y-2">
+                        <h4
+                            class="font-serif font-bold text-deepviolet-950 uppercase text-lg"
+                        >
+                            Diritti d'Autore
+                        </h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            L'Autore mantiene integralmente e in via esclusiva i
+                            diritti sulle opere pubblicate.
+                        </p>
+                    </div>
+                    <div class="space-y-2">
+                        <h4
+                            class="font-serif font-bold text-deepviolet-950 uppercase text-lg"
+                        >
+                            Libertà Operativa
+                        </h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Possibilità di richiedere il ritiro o la rimozione
+                            delle opere in qualsiasi momento.
+                        </p>
+                    </div>
+                    <div class="space-y-2">
+                        <h4
+                            class="font-serif font-bold text-deepviolet-950 uppercase text-lg"
+                        >
+                            Indipendenza Economica
+                        </h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Nessuna pretesa economica o percentuale sulle
+                            vendite o sfruttamento delle opere.
+                        </p>
+                    </div>
+                    <div class="space-y-2">
+                        <h4
+                            class="font-serif font-bold text-deepviolet-950 uppercase text-lg"
+                        >
+                            Tutela Legale
+                        </h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Controllo costante dei contenuti secondo le
+                            normative vigenti per la sicurezza di tutti i soci.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Description Short -->
+    <section class="py-32 bg-violet-50/30">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2
+                class="text-4xl md:text-6xl font-serif font-bold text-deepviolet-950 uppercase mb-8"
+            >
+                Esempi di Pubblicazione
+            </h2>
+            <div class="w-24 h-1 bg-gold-400 mx-auto mb-16"></div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div
+                    class="bg-white p-8 border border-violet-100 shadow-sm hover:border-gold-400 transition-all"
+                >
+                    <h3
+                        class="font-serif font-bold uppercase text-xl mb-4 text-deepviolet-950"
+                    >
+                        Scritti & Poesia
+                    </h3>
+                    <p class="text-gray-500 text-sm italic">
+                        Diffusione globale per poeti e scrittori emergenti.
+                    </p>
+                </div>
+                <div
+                    class="bg-white p-8 border border-violet-100 shadow-sm hover:border-gold-400 transition-all"
+                >
+                    <h3
+                        class="font-serif font-bold uppercase text-xl mb-4 text-deepviolet-950"
+                    >
+                        Belle Arti
+                    </h3>
+                    <p class="text-gray-500 text-sm italic">
+                        Pittura, scultura e arti visive presentate digitalmente.
+                    </p>
+                </div>
+                <div
+                    class="bg-white p-8 border border-violet-100 shadow-sm hover:border-gold-400 transition-all"
+                >
+                    <h3
+                        class="font-serif font-bold uppercase text-xl mb-4 text-deepviolet-950"
+                    >
+                        Tesi di Laurea
+                    </h3>
+                    <p class="text-gray-500 text-sm italic">
+                        Network dei laureati per valorizzare la ricerca
+                        accademica.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Technology Section -->
+    <section
+        class="py-24 bg-deepviolet-950 text-white relative overflow-hidden"
+    >
+        <!-- Marble Texture Background for contrast -->
+        <div class="absolute inset-0 z-0 opacity-5 pointer-events-none">
+            <img
+                src={`${baseUrl}/images/marble_texture.png`}
+                alt=""
+                class="w-full h-full object-cover"
+            />
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <span
+                    class="text-gold-400 font-bold uppercase tracking-[0.4em] text-xs block mb-4"
+                    >Innovation Bridge</span
+                >
+                <h2
+                    class="text-3xl md:text-5xl font-serif font-bold uppercase tracking-tight mb-6"
+                >
+                    Tecnologia al Servizio <br /><span class="text-gold-500"
+                        >degli Artisti</span>
+                </h2>
+                <div class="w-16 h-[1px] bg-gold-500 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <a
+                    href={`${baseUrl}/tecnologie`}
+                    class="p-8 border border-white/10 bg-white/5 hover:border-gold-500 transition-all group overflow-hidden relative"
+                >
+                    <span
+                        class="absolute top-2 right-4 text-xs font-bold text-white/5 group-hover:text-gold-500/20 transition-all font-serif italic text-4xl"
+                        >IT</span
+                    >
+                    <h3
+                        class="font-serif font-bold text-lg mb-4 uppercase tracking-wider"
+                    >
+                        Traduzione Globale
+                    </h3>
+                    <p class="text-violet-200/40 text-xs leading-relaxed">
+                        Abbattere ogni barriera linguistica per connettere
+                        l'arte al mondo.
+                    </p>
+                </a>
+                <a
+                    href={`${baseUrl}/tecnologie`}
+                    class="p-8 border border-white/10 bg-white/5 hover:border-gold-500 transition-all group overflow-hidden relative"
+                >
+                    <span
+                        class="absolute top-2 right-4 text-xs font-bold text-white/5 group-hover:text-gold-500/20 transition-all font-serif italic text-4xl"
+                        >AI</span
+                    >
+                    <h3
+                        class="font-serif font-bold text-lg mb-4 uppercase tracking-wider"
+                    >
+                        Curatela Assistita
+                    </h3>
+                    <p class="text-violet-200/40 text-xs leading-relaxed">
+                        Algoritmi intelligenti per valorizzare ogni singola
+                        opera e talento.
+                    </p>
+                </a>
+                <a
+                    href={`${baseUrl}/tecnologie`}
+                    class="p-8 border border-white/10 bg-white/5 hover:border-gold-500 transition-all group overflow-hidden relative"
+                >
+                    <span
+                        class="absolute top-2 right-4 text-xs font-bold text-white/5 group-hover:text-gold-500/20 transition-all font-serif italic text-4xl"
+                        >VC</span
+                    >
+                    <h3
+                        class="font-serif font-bold text-lg mb-4 uppercase tracking-wider"
+                    >
+                        Accesso Vocale
+                    </h3>
+                    <p class="text-violet-200/40 text-xs leading-relaxed">
+                        Navigazione inclusiva per un'esperienza d'arte senza
+                        limiti.
+                    </p>
+                </a>
+                <a
+                    href={`${baseUrl}/tecnologie`}
+                    class="p-8 border border-white/10 bg-white/5 hover:border-gold-500 transition-all group overflow-hidden relative"
+                >
+                    <span
+                        class="absolute top-2 right-4 text-xs font-bold text-white/5 group-hover:text-gold-500/20 transition-all font-serif italic text-4xl"
+                        >VR</span
+                    >
+                    <h3
+                        class="font-serif font-bold text-lg mb-4 uppercase tracking-wider"
+                    >
+                        VR Experiences
+                    </h3>
+                    <p class="text-violet-200/40 text-xs leading-relaxed">
+                        Tour virtuali e gallerie immersive per vivere l'arte in
+                        3D.
+                    </p>
+                </a>
+            </div>
+
+            <div class="mt-16 text-center">
+                <a
+                    href={`${baseUrl}/tecnologie`}
+                    class="text-gold-400 text-[10px] font-bold uppercase tracking-[0.4em] hover:text-white transition-all"
+                    >Esplora la Roadmap Tecnologica →</a
+                >
+            </div>
+        </div>
+    </section>
+</Layout>

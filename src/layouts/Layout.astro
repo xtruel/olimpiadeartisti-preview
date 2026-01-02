@@ -1,0 +1,313 @@
+---
+const { title } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<!doctype html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+        />
+        <title>{title} | Olimpiade degli Artisti</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="icon" type="image/svg+xml" href={`${baseUrl}/favicon.svg`} />
+
+        <style is:global>
+            :root {
+                --deepviolet-50: #f5f3ff;
+                --deepviolet-100: #ede9fe;
+                --deepviolet-900: #4c1d95;
+                --deepviolet-950: #1e0b44;
+                --gold-400: #fbbf24;
+                --gold-500: #f59e0b;
+                --gold-600: #d97706;
+            }
+
+            body {
+                font-family: "Montserrat", sans-serif;
+                background-image: url("/olimpiadeartisti-preview/images/paper_texture.png");
+                background-attachment: fixed;
+                background-size: cover;
+            }
+
+            .font-serif {
+                font-family: "Cinzel", serif;
+            }
+
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+
+            @keyframes fadeInUp {
+                0% {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            .animate-fade-in-up {
+                animation: 0.8s ease-out forwards fadeInUp;
+            }
+
+            /* Museum Style Block */
+            .museum-block {
+                background: rgba(255, 255, 255, 0.8);
+                border: 1px solid rgba(30, 11, 68, 0.1);
+                backdrop-filter: blur(5px);
+                position: relative;
+                overflow: hidden;
+            }
+            .museum-block::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 4px;
+                height: 100%;
+                background: var(--gold-500);
+            }
+        </style>
+    </head>
+    <body class="bg-white text-gray-900">
+        <nav
+            class="sticky top-0 z-[100] bg-white/95 backdrop-blur-xl border-b border-violet-100 shadow-sm"
+        >
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Main Header with Logo -->
+                <div class="flex flex-col items-center pt-6 pb-4">
+                    <a
+                        href={`${baseUrl}/`}
+                        class="group flex flex-col items-center text-center space-y-1"
+                    >
+                        <span
+                            class="text-[8px] md:text-[10px] tracking-[0.8em] uppercase text-gold-600 font-bold group-hover:text-gold-400 transition-all duration-700 opacity-80"
+                        >
+                            International Cultural Project
+                        </span>
+                        <h1
+                            class="text-2xl md:text-5xl font-serif font-bold text-deepviolet-950 tracking-[0.05em] leading-tight drop-shadow-sm px-2"
+                        >
+                            OLIMPIADE <span class="text-gold-600">DEGLI</span> ARTISTI
+                        </h1>
+                        <div
+                            class="flex items-center space-x-3 w-48 md:w-64 max-w-full"
+                        >
+                            <div
+                                class="h-[1px] flex-1 bg-gradient-to-r from-transparent via-gold-400/50 to-transparent"
+                            >
+                            </div>
+                            <div
+                                class="w-1.5 h-1.5 rotate-45 border border-gold-400 opacity-50"
+                            >
+                            </div>
+                            <div
+                                class="h-[1px] flex-1 bg-gradient-to-r from-transparent via-gold-400/50 to-transparent"
+                            >
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Navigation Menu -->
+                <div
+                    class="flex justify-center pb-4 md:pb-6 overflow-x-auto no-scrollbar"
+                >
+                    <ul
+                        class="flex items-center space-x-4 md:space-x-8 px-4 whitespace-nowrap"
+                    >
+                        <li>
+                            <a
+                                href={`${baseUrl}/`}
+                                class="text-[9px] md:text-[11px] font-bold uppercase tracking-[0.2em] text-deepviolet-900 hover:text-gold-600 transition-all"
+                                >Home</a>
+                        </li>
+                        <li>
+                            <a
+                                href={`${baseUrl}/progetto`}
+                                class="text-[9px] md:text-[11px] font-bold uppercase tracking-[0.2em] text-deepviolet-900 hover:text-gold-600 transition-all"
+                                >Progetto</a>
+                        </li>
+                        <li>
+                            <a
+                                href={`${baseUrl}/tecnologie`}
+                                class="text-[9px] md:text-[11px] font-bold uppercase tracking-[0.2em] text-deepviolet-900 hover:text-gold-600 transition-all"
+                                >Tecnologie</a>
+                        </li>
+                        <li>
+                            <a
+                                href={`${baseUrl}/come-funziona`}
+                                class="text-[9px] md:text-[11px] font-bold uppercase tracking-[0.2em] text-deepviolet-900 hover:text-gold-600 transition-all"
+                                >Come funziona</a>
+                        </li>
+                        <li>
+                            <a
+                                href={`${baseUrl}/artisti`}
+                                class="text-[9px] md:text-[11px] font-bold uppercase tracking-[0.2em] text-deepviolet-900 hover:text-gold-600 transition-all"
+                                >Categorie</a>
+                        </li>
+                        <li>
+                            <a
+                                href={`${baseUrl}/quote-pacchetti`}
+                                class="text-[9px] md:text-[11px] font-bold uppercase tracking-[0.2em] text-deepviolet-900 hover:text-gold-600 transition-all"
+                                >Quote & Pacchetti</a>
+                        </li>
+                        <li>
+                            <a
+                                href={`${baseUrl}/architettura`}
+                                class="text-[9px] md:text-[11px] font-bold uppercase tracking-[0.2em] text-deepviolet-900 hover:text-gold-600 transition-all"
+                                >Architettura</a>
+                        </li>
+                        <li>
+                            <a
+                                href={`${baseUrl}/statuto`}
+                                class="text-[9px] md:text-[11px] font-bold uppercase tracking-[0.2em] text-deepviolet-900 hover:text-gold-600 transition-all"
+                                >Statuto</a>
+                        </li>
+                        <li>
+                            <a
+                                href={`${baseUrl}/iscrizione`}
+                                class="text-[9px] md:text-[11px] font-bold uppercase tracking-[0.2em] text-deepviolet-900 hover:text-gold-600 transition-all"
+                                >Iscrizione</a>
+                        </li>
+                        <li>
+                            <a
+                                href={`${baseUrl}/contatti`}
+                                class="text-[9px] md:text-[11px] font-bold uppercase tracking-[0.2em] text-deepviolet-900 hover:text-gold-600 transition-all"
+                                >Contatti</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <slot />
+        </main>
+
+        <footer
+            class="bg-deepviolet-950 text-white pt-20 pb-10 relative overflow-hidden"
+        >
+            <div
+                class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-gold-500/50 to-transparent"
+            >
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                    <div class="space-y-6">
+                        <h3
+                            class="text-2xl font-serif font-bold tracking-tight"
+                        >
+                            OLIMPIADE <br /><span class="text-gold-500"
+                                >DEGLI ARTISTI</span
+                            >
+                        </h3>
+                        <p
+                            class="text-violet-200/60 text-sm leading-relaxed max-w-xs"
+                        >
+                            Una piattaforma curatoriale d'eccellenza per la
+                            valorizzazione del talento creativo internazionale.
+                        </p>
+                    </div>
+                    <div>
+                        <h4
+                            class="text-gold-400 font-bold uppercase tracking-widest text-xs mb-6"
+                        >
+                            Link Utili
+                        </h4>
+                        <ul class="space-y-4 text-sm text-violet-100/70">
+                            <li>
+                                <a
+                                    href={`${baseUrl}/regolamento`}
+                                    class="hover:text-gold-400 transition-colors"
+                                    >Regolamento</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href={`${baseUrl}/press-kit`}
+                                    class="hover:text-gold-400 transition-colors"
+                                    >Press Kit</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href={`${baseUrl}/iscrizione`}
+                                    class="hover:text-gold-400 transition-colors"
+                                    >Scarica Modulo</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4
+                            class="text-gold-400 font-bold uppercase tracking-widest text-xs mb-6"
+                        >
+                            Contatti
+                        </h4>
+                        <ul class="space-y-4 text-sm text-violet-100/70">
+                            <li>
+                                <a
+                                    href="mailto:studio.futuro@virgilio.it"
+                                    class="hover:text-gold-400 transition-colors block"
+                                    >studio.futuro@virgilio.it</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="tel:+393388103984"
+                                    class="hover:text-gold-400 transition-colors block"
+                                    >+39 338 810 39 84</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4
+                            class="text-gold-400 font-bold uppercase tracking-widest text-xs mb-6"
+                        >
+                            Segui
+                        </h4>
+                        <div class="flex space-x-4">
+                            <a
+                                href="#"
+                                class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-gold-500 transition-all"
+                                >IG</a
+                            >
+                            <a
+                                href="#"
+                                class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-gold-500 transition-all"
+                                >FB</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-white/5 pt-8 text-center">
+                    <p
+                        class="text-[10px] uppercase tracking-[0.4em] text-violet-300/30"
+                    >
+                        &copy; 2026 Olimpiade degli Artisti. Excellence &
+                        Tradition.
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

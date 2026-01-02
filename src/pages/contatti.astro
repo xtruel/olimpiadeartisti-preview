@@ -1,0 +1,146 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Contatti">
+    <section class="py-32 bg-white min-h-screen">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-20">
+                <span
+                    class="text-gold-600 font-bold uppercase tracking-[0.4em] text-xs block mb-4"
+                    >Get in Touch</span
+                >
+                <h1
+                    class="text-4xl md:text-6xl font-serif font-bold text-deepviolet-950 uppercase mb-6"
+                >
+                    Contatta la <span class="text-gold-600">Segreteria</span>
+                </h1>
+                <div class="w-16 h-1 bg-gold-500 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <!-- Contact Info -->
+                <div class="space-y-12">
+                    <div class="space-y-6">
+                        <h2
+                            class="text-xl font-serif font-bold text-deepviolet-950 uppercase border-l-4 border-gold-500 pl-6"
+                        >
+                            Informazioni Generali
+                        </h2>
+                        <p class="text-gray-600 text-sm leading-relaxed italic">
+                            Siamo a disposizione per chiarimenti su iscrizioni,
+                            pubblicazioni e partnership per artisti italiani e
+                            internazionali.
+                        </p>
+                    </div>
+
+                    <div class="space-y-8">
+                        <div class="flex items-center gap-6 group">
+                            <div
+                                class="w-12 h-12 rounded-full bg-violet-50 flex items-center justify-center text-gold-500 group-hover:bg-gold-500 group-hover:text-white transition-all"
+                            >
+                                <svg
+                                    class="w-6 h-6"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    ><path
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                    ></path></svg
+                                >
+                            </div>
+                            <div>
+                                <span
+                                    class="block text-[10px] uppercase font-bold text-gray-400"
+                                    >Email</span
+                                >
+                                <a
+                                    href="mailto:studio.futuro@virgilio.it"
+                                    class="text-deepviolet-950 font-bold hover:text-gold-500 transition-colors"
+                                    >studio.futuro@virgilio.it</a
+                                >
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-6 group">
+                            <div
+                                class="w-12 h-12 rounded-full bg-violet-50 flex items-center justify-center text-gold-500 group-hover:bg-gold-500 group-hover:text-white transition-all"
+                            >
+                                <svg
+                                    class="w-6 h-6"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    ><path
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                                    ></path></svg
+                                >
+                            </div>
+                            <div>
+                                <span
+                                    class="block text-[10px] uppercase font-bold text-gray-400"
+                                    >Telefono / WhatsApp</span
+                                >
+                                <a
+                                    href="tel:+393388103984"
+                                    class="text-deepviolet-950 font-bold hover:text-gold-500 transition-colors"
+                                    >+39 338 810 39 84</a
+                                >
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-6 group">
+                            <div
+                                class="w-12 h-12 rounded-full bg-violet-50 flex items-center justify-center text-gold-500"
+                            >
+                                <svg
+                                    class="w-6 h-6"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    ><path
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                                    ></path><path
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                                    ></path></svg
+                                >
+                            </div>
+                            <div>
+                                <span
+                                    class="block text-[10px] uppercase font-bold text-gray-400"
+                                    >Sede</span
+                                >
+                                <span class="text-deepviolet-950 font-bold"
+                                    >Roma / Perugia, Italia</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Simple Contact Box -->
+                <div class="museum-block p-10 bg-violet-50/30">
+                    <h3
+                        class="font-serif font-bold uppercase text-xl text-deepviolet-950 mb-6"
+                    >
+                        Orari Segreteria
+                    </h3>
+                    <div class="space-y-4 text-sm text-gray-600">
+                        <p>Dal Lunedì al Venerdì</p>
+                        <p
+                            class="font-bold text-deepviolet-950 uppercase tracking-widest"
+                        >
+                            09:00 — 18:00
+                        </p>
+                        <div class="pt-8 space-y-4">
+                            <p class="text-xs italic">
+                                "Rispondiamo a ogni manifestazione di interesse
+                                entro pochi giorni lavorativi."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>

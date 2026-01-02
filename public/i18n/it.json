@@ -1,0 +1,13 @@
+{
+    "nav_home": "Home",
+    "nav_progetto": "Progetto",
+    "nav_tecnologie": "Tecnologie",
+    "tech_hero_title": "Tecnologie del Futuro",
+    "tech_hero_subtitle": "L'intelligenza artificiale incontra l'eccellenza creativa.",
+    "demo_translation_title": "Traduzione Globale",
+    "demo_translation_desc": "Il nostro sistema punta a superare le barriere linguistiche con traduzioni simultanee in 115 lingue.",
+    "demo_ai_title": "AI Curator",
+    "demo_ai_desc": "Un algoritmo che consiglia le opere in base alla sensibilità e agli interessi dell'utente.",
+    "demo_voice_title": "Accesso Vocale",
+    "demo_voice_desc": "Navigazione e ricerca guidate dalla voce per una totale accessibilità."
+}

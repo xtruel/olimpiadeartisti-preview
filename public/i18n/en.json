@@ -1,0 +1,13 @@
+{
+    "nav_home": "Home",
+    "nav_progetto": "Project",
+    "nav_tecnologie": "Technologies",
+    "tech_hero_title": "Future Technologies",
+    "tech_hero_subtitle": "Artificial intelligence meets creative excellence.",
+    "demo_translation_title": "Global Translation",
+    "demo_translation_desc": "Our system aims to overcome language barriers with simultaneous translations in 115 languages.",
+    "demo_ai_title": "AI Curator",
+    "demo_ai_desc": "An algorithm that recommends works based on user sensitivity and interests.",
+    "demo_voice_title": "Voice Access",
+    "demo_voice_desc": "Voice-guided navigation and search for total accessibility."
+}
