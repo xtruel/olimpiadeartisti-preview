@@ -1,0 +1,31 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2e1065;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#5b21b6;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.6" />
+    </linearGradient>
+    <pattern id="artPattern" patternUnits="userSpaceOnUse" width="100" height="100">
+      <circle cx="50" cy="50" r="2" fill="#f59e0b" opacity="0.3"/>
+      <circle cx="25" cy="25" r="1" fill="#fbbf24" opacity="0.2"/>
+      <circle cx="75" cy="75" r="1" fill="#fcd34d" opacity="0.2"/>
+    </pattern>
+  </defs>
+  
+  <rect width="1920" height="1080" fill="url(#heroGradient)"/>
+  <rect width="1920" height="1080" fill="url(#artPattern)"/>
+  
+  <!-- Elementi decorativi artistici -->
+  <g opacity="0.1">
+    <path d="M200,200 Q400,100 600,200 T1000,200" stroke="#f59e0b" stroke-width="3" fill="none"/>
+    <path d="M300,400 Q500,300 700,400 T1100,400" stroke="#fbbf24" stroke-width="2" fill="none"/>
+    <path d="M100,600 Q300,500 500,600 T900,600" stroke="#fcd34d" stroke-width="2" fill="none"/>
+  </g>
+  
+  <!-- Simboli artistici -->
+  <g opacity="0.15" fill="#f59e0b">
+    <circle cx="1600" cy="200" r="30"/>
+    <rect x="1700" y="300" width="40" height="40" transform="rotate(45 1720 320)"/>
+    <polygon points="1650,500 1680,450 1710,500 1695,530 1665,530" />
+  </g>
+</svg>

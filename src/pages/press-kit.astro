@@ -1,0 +1,145 @@
+---
+import Layout from "../layouts/Layout.astro";
+const baseUrl = import.meta.env.BASE_URL;
+---
+
+<Layout title="Press Kit | Olimpiade degli Artisti">
+    <section class="py-32 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="mb-20 text-center">
+                <span
+                    class="text-gold-600 font-bold uppercase tracking-[0.4em] text-xs block mb-4"
+                    >Media Relations</span
+                >
+                <h1
+                    class="text-4xl md:text-6xl font-serif font-bold text-deepviolet-950 uppercase mb-6"
+                >
+                    Press Kit
+                </h1>
+                <div class="w-12 h-1 bg-gold-400 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-20">
+                <div class="space-y-6">
+                    <h2
+                        class="text-2xl font-serif font-bold text-deepviolet-950 uppercase"
+                    >
+                        Mission
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed font-light">
+                        L'Olimpiade degli Artisti è il primo referendum
+                        internazionale indipendente dedicato all'eccellenza
+                        creativa. Nato per restituire centralità al merito
+                        attraverso un sistema di curatela d'élite e votazione
+                        democratica globale.
+                    </p>
+                </div>
+                <div class="space-y-6">
+                    <h2
+                        class="text-2xl font-serif font-bold text-deepviolet-950 uppercase"
+                    >
+                        Contatti Stampa
+                    </h2>
+                    <p class="text-gray-600 font-light italic">
+                        Per interviste, materiale ad alta risoluzione o
+                        accrediti per l'evento 2026:
+                    </p>
+                    <a
+                        href="mailto:press@olimpiadeartisti.net"
+                        class="text-gold-600 font-bold border-b border-gold-200"
+                        >press@olimpiadeartisti.net</a
+                    >
+                </div>
+            </div>
+
+            <div class="space-y-12">
+                <h2
+                    class="text-2xl font-serif font-bold text-deepviolet-950 uppercase border-b border-violet-50 pb-4"
+                >
+                    Download Asset Ufficiali
+                </h2>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    <div
+                        class="p-8 border border-violet-100 text-center hover:bg-gold-50 transition-colors"
+                    >
+                        <div class="text-gold-500 mb-4">
+                            <svg
+                                class="w-10 h-10 mx-auto"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                ><path
+                                    d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"
+                                ></path></svg
+                            >
+                        </div>
+                        <span
+                            class="text-[10px] font-bold uppercase tracking-widest block mb-2"
+                            >Logo Pack</span
+                        >
+                        <p class="text-[9px] text-gray-400 mb-4">
+                            SVG / PNG / AI
+                        </p>
+                        <button
+                            class="text-xs font-bold text-deepviolet-900 border-b border-deepviolet-200"
+                            >Scarica</button
+                        >
+                    </div>
+
+                    <div
+                        class="p-8 border border-violet-100 text-center hover:bg-gold-50 transition-colors"
+                    >
+                        <div class="text-gold-500 mb-4">
+                            <svg
+                                class="w-10 h-10 mx-auto"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                ><path
+                                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                                ></path></svg
+                            >
+                        </div>
+                        <span
+                            class="text-[10px] font-bold uppercase tracking-widest block mb-2"
+                            >Immagini Ufficiali</span
+                        >
+                        <p class="text-[9px] text-gray-400 mb-4">JPG HD (4K)</p>
+                        <button
+                            class="text-xs font-bold text-deepviolet-900 border-b border-deepviolet-200"
+                            >Scarica</button
+                        >
+                    </div>
+
+                    <div
+                        class="p-8 border border-violet-100 text-center hover:bg-gold-50 transition-colors"
+                    >
+                        <div class="text-gold-500 mb-4">
+                            <svg
+                                class="w-10 h-10 mx-auto"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                ><path
+                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                                ></path></svg
+                            >
+                        </div>
+                        <span
+                            class="text-[10px] font-bold uppercase tracking-widest block mb-2"
+                            >Comunicato Base</span
+                        >
+                        <p class="text-[9px] text-gray-400 mb-4">
+                            PDF (ITA/ENG)
+                        </p>
+                        <button
+                            class="text-xs font-bold text-deepviolet-900 border-b border-deepviolet-200"
+                            >Scarica</button
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>
